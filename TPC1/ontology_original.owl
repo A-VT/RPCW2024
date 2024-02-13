@@ -1,0 +1,179 @@
+@prefix : <http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3> .
+
+<http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#has_a
+:has_a rdf:type owl:ObjectProperty ;
+       rdfs:domain :Register ;
+       rdfs:range :Plantation .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#is_state
+:is_state rdf:type owl:ObjectProperty ;
+          rdfs:domain :Plantation ;
+          rdfs:range :State .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#located_in
+:located_in rdf:type owl:ObjectProperty ;
+            rdfs:domain :Register ;
+            rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#made_of
+:made_of rdf:type owl:ObjectProperty ;
+         rdfs:domain :Plantation ;
+         rdfs:range :Species .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#managed_by
+:managed_by rdf:type owl:ObjectProperty ;
+            rdfs:domain :Register ;
+            rdfs:range :Company .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#planted_by
+:planted_by rdf:type owl:ObjectProperty ;
+            rdfs:domain :Plantation ;
+            rdfs:range :Company .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#company_name
+:company_name rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Company ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#date_plantation
+:date_plantation rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Plantation ;
+                 rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#date_update
+:date_update rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Register ;
+             rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#id
+:id rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Register ;
+    rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#local
+:local rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Location ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#name_state
+:name_state rdf:type owl:DatatypeProperty ;
+            rdfs:domain :State ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#numb_interventations
+:numb_interventations rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Register ;
+                      rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#parish
+:parish rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Location ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#plantation
+:plantation rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Plantation ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#planter
+:planter rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Plantation ;
+         rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#reg_number
+:reg_number rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Register ;
+            rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#scientific_name
+:scientific_name rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Species ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#species_name
+:species_name rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Species ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#street_id
+:street_id rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Location ;
+           rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#street_name
+:street_name rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Location ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#tutor
+:tutor rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Plantation ;
+       rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Company
+:Company rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Location
+:Location rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Plantation
+:Plantation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Register
+:Register rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Species
+:Species rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#State
+:State rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
