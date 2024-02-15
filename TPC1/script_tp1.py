@@ -103,7 +103,7 @@ def main():
         :regist_{reg['Gestor']} rdf:type owl:NamedIndividual ,
                    :Register ;
           :managed_by :{reg['Gestor']} ;
-          :located_in :{reg['Gestor']} ;
+          :located_in :{reg['Código de rua']} ;
           :has_a :plantation_{reg['Id']} ;
           :date_update "{reg['Data de actualização']}"^^xsd:dateTime ;
           :numb_interventions "{reg['Número de intervenções']}"^^xsd:int ;
