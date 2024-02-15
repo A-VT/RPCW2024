@@ -109,7 +109,7 @@
 ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#planter
 :planter rdf:type owl:DatatypeProperty ;
          rdfs:domain :Plantation ;
-         rdfs:range xsd:boolean .
+         rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#reg_number
@@ -145,7 +145,7 @@
 ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#tutor
 :tutor rdf:type owl:DatatypeProperty ;
        rdfs:domain :Plantation ;
-       rdfs:range xsd:boolean .
+       rdfs:range xsd:string .
 
 
 #################################################################
