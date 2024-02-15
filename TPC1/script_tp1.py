@@ -10,7 +10,7 @@ def main():
     #ttl creation
     ttl = ""
 
-    companies_set, locations_set, species_set, state_set, plantation_set = {}, {}, {}, {}, {}
+    companies_set, locations_set, species_set, state_set = {}, {}, {}, {}
 
 
     for reg in bd:
@@ -86,19 +86,31 @@ def main():
         ### supposing each register has a single unique plantation
         ### aka always a creation of a plantation for a register
         plantation_creation = f"""
-        :plantation_{reg['Gestor']} rdf:type owl:NamedIndividual ,
+        :plantation_{reg['Id']} rdf:type owl:NamedIndividual ,
                      :Plantation ;
-            :planted_by :empresa1 ;
-            :is_state :estado1 ;
-            :made_of :planta1 ;
-            :planter "não"^^xsd:string ;
-            :date_plantation ""^^xsd:dateTime ;
-            :plantation "arruamento"^^xsd:string ;
-            :tutor "sim"^^xsd:string .
+            :planted_by :{reg['Origem']} ;
+            :is_state :{reg['Estado']} ;
+            :made_of :{reg['Nome Científico']} ;
+            :planter "{reg['Caldeira']}"^^xsd:string ;
+            :date_plantation "{reg['Data de Plantação']}"^^xsd:dateTime ;
+            :plantation "{reg['Implantação']}"^^xsd:string ;
+            :tutor "{reg['Tutor']}"^^xsd:string .
         """
-        companies_set.add(reg['Gestor'])
         ttl += plantation_creation
 
+        ### creation of the register
+        regist_creation = f"""
+        :regist_{reg['Gestor']} rdf:type owl:NamedIndividual ,
+                   :Register ;
+          :managed_by :{reg['Gestor']} ;
+          :located_in :{reg['Gestor']} ;
+          :has_a :plantation_{reg['Id']} ;
+          :date_update "{reg['Data de actualização']}"^^xsd:dateTime ;
+          :numb_interventions "{reg['Número de intervenções']}"^^xsd:int ;
+          :reg_number "{reg['Número de Registo']}"^^xsd:int ;
+          :id "{reg['Id']}"^^xsd:int .
+        """
+        ttl += regist_creation
 
 
     print(ttl)

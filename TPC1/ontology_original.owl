@@ -88,8 +88,8 @@
             rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#numb_interventations
-:numb_interventations rdf:type owl:DatatypeProperty ;
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#numb_interventions
+:numb_interventions rdf:type owl:DatatypeProperty ;
                       rdfs:domain :Register ;
                       rdfs:range xsd:int .
 
@@ -100,8 +100,8 @@
         rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#plantation
-:plantation rdf:type owl:DatatypeProperty ;
+###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#plantation_type
+:plantation_type rdf:type owl:DatatypeProperty ;
             rdfs:domain :Plantation ;
             rdfs:range xsd:string .
 
