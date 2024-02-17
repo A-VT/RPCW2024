@@ -26,17 +26,18 @@ def main():
     for reg in bd:
 
         ### verify and possibly create companies (by 'Origem')
-        if reg['Origem'] not in companies_set and reg['Origem'] != "":
+        new_origin = str(reg['Origem']).replace(' ', '_')
+        if new_origin not in companies_set and new_origin != "":
             company_creation = f"""
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{reg['Origem']}
-            :{reg['Origem']} rdf:type owl:NamedIndividual ,
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_origin}
+            :{new_origin} rdf:type owl:NamedIndividual ,
                             :Company ;
-                    :company_name "{reg['Origem']}"^^xsd:string .
+                    :company_name "{new_origin}"^^xsd:string .
             """
-            companies_set.add(reg['Origem'])
+            companies_set.add(new_origin)
             ttl += company_creation
 
-
+        '''
         ### verify and possibly create companies (by 'Gestor')
         if reg['Gestor'] not in companies_set and reg['Gestor'] != "":
             company_creation = f"""
@@ -129,7 +130,9 @@ def main():
           :id "{reg['Id']}"^^xsd:int .
         """
         ttl += regist_creation
+        '''
 
+    print(ttl)
     out_f.write(ttl)
 
 if __name__ == "__main__":
