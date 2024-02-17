@@ -182,63 +182,78 @@
     #    Individuals
     #################################################################
     
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#CMC_Outros
-            :CMC_Outros rdf:type owl:NamedIndividual ,
-                            :Company ;
-                    :company_name "CMC_Outros"^^xsd:string .
-            
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Outros
-            :Outros rdf:type owl:NamedIndividual ,
-                            :Company ;
-                    :company_name "Outros"^^xsd:string .
-            
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#DGEV_CEVAR
-            :DGEV_CEVAR rdf:type owl:NamedIndividual ,
-                            :Company ;
-                    :company_name "DGEV_CEVAR"^^xsd:string .
-            
             ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#DGEV
             :DGEV rdf:type owl:NamedIndividual ,
                             :Company ;
                     :company_name "DGEV"^^xsd:string .
             
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Caldeira_vazia
-            :Caldeira_vazia rdf:type owl:NamedIndividual ,
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Não_é_municipal
+            :Não_é_municipal rdf:type owl:NamedIndividual ,
                             :Company ;
-                    :company_name "Caldeira_vazia"^^xsd:string .
-            
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Junta_de_Freguesia
-            :Junta_de_Freguesia rdf:type owl:NamedIndividual ,
-                            :Company ;
-                    :company_name "Junta_de_Freguesia"^^xsd:string .
-            
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Loteador
-            :Loteador rdf:type owl:NamedIndividual ,
-                            :Company ;
-                    :company_name "Loteador"^^xsd:string .
-            
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#a_identificar
-            :a_identificar rdf:type owl:NamedIndividual ,
-                            :Company ;
-                    :company_name "a_identificar"^^xsd:string .
+                    :company_name "Não_é_municipal"^^xsd:string .
             
             ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Cascais_Ambiente
             :Cascais_Ambiente rdf:type owl:NamedIndividual ,
                             :Company ;
                     :company_name "Cascais_Ambiente"^^xsd:string .
             
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Cascais_Proxima
-            :Cascais_Proxima rdf:type owl:NamedIndividual ,
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#CMC_Outros
+            :CMC_Outros rdf:type owl:NamedIndividual ,
                             :Company ;
-                    :company_name "Cascais_Proxima"^^xsd:string .
+                    :company_name "CMC_Outros"^^xsd:string .
+            
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Cascais_Envolvente
+            :Cascais_Envolvente rdf:type owl:NamedIndividual ,
+                            :Company ;
+                    :company_name "Cascais_Envolvente"^^xsd:string .
+            
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Junta_de_Freguesia
+            :Junta_de_Freguesia rdf:type owl:NamedIndividual ,
+                            :Company ;
+                    :company_name "Junta_de_Freguesia"^^xsd:string .
             
             ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#CMC
             :CMC rdf:type owl:NamedIndividual ,
                             :Company ;
                     :company_name "CMC"^^xsd:string .
             
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Não_é_municipal
-            :Não_é_municipal rdf:type owl:NamedIndividual ,
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#DGEV_CEVAR
+            :DGEV_CEVAR rdf:type owl:NamedIndividual ,
                             :Company ;
-                    :company_name "Não_é_municipal"^^xsd:string .
+                    :company_name "DGEV_CEVAR"^^xsd:string .
+            
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Outros
+            :Outros rdf:type owl:NamedIndividual ,
+                            :Company ;
+                    :company_name "Outros"^^xsd:string .
+            
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#EMAC
+            :EMAC rdf:type owl:NamedIndividual ,
+                            :Company ;
+                    :company_name "EMAC"^^xsd:string .
+            
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Loteador
+            :Loteador rdf:type owl:NamedIndividual ,
+                            :Company ;
+                    :company_name "Loteador"^^xsd:string .
+            
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Caldeira_vazia
+            :Caldeira_vazia rdf:type owl:NamedIndividual ,
+                            :Company ;
+                    :company_name "Caldeira_vazia"^^xsd:string .
+            
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#a_identificar
+            :a_identificar rdf:type owl:NamedIndividual ,
+                            :Company ;
+                    :company_name "a_identificar"^^xsd:string .
+            
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Espaço_Verde
+            :Espaço_Verde rdf:type owl:NamedIndividual ,
+                            :Company ;
+                    :company_name "Espaço_Verde"^^xsd:string .
+            
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Cascais_Proxima
+            :Cascais_Proxima rdf:type owl:NamedIndividual ,
+                            :Company ;
+                    :company_name "Cascais_Proxima"^^xsd:string .
             

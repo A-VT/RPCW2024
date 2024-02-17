@@ -37,46 +37,56 @@ def main():
             companies_set.add(new_origin)
             ttl += company_creation
 
-        '''
         ### verify and possibly create companies (by 'Gestor')
-        if reg['Gestor'] not in companies_set and reg['Gestor'] != "":
+        new_gestor = str(reg['Gestor']).replace(' ', '_')
+        if new_gestor not in companies_set and new_gestor != "":
             company_creation = f"""
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{reg['Gestor']}
-            :{reg['Gestor']} rdf:type owl:NamedIndividual ,
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_gestor}
+            :{new_gestor} rdf:type owl:NamedIndividual ,
                             :Company ;
-                    :company_name "{reg['Gestor']}"^^xsd:string .
+                    :company_name "{new_gestor}"^^xsd:string .
             """
-            companies_set.add(reg['Gestor'])
+            companies_set.add(new_gestor)
             ttl += company_creation
         
-
+        '''
         ### verify and possibly create locations (by 'Código de rua')
-        if reg['Código de rua'] not in locations_set and reg['Código de rua'] != "":
+        try:
+            new_code = int(reg['Código de rua'])
+        except:
+            new_code = 0
+
+        if new_code not in locations_set and new_code != 0:
             location_creation = f"""
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{reg['Código de rua']}
-            :{reg['Código de rua']} rdf:type owl:NamedIndividual ,
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_code}
+            :{new_code} rdf:type owl:NamedIndividual ,
                         :Location ;
-            :street_id "{reg['Código de rua']}"^^xsd:int ;
+            :street_id "{new_code}"^^xsd:int ;
             :parish "{reg['Freguesia']}"^^xsd:string ;
             :local "{reg['Local']}"^^xsd:string ;
             :street_name "{reg['Rua']}"^^xsd:string .
             """
-            locations_set.add(reg['Código de rua'])
+            locations_set.add(new_code)
             ttl += location_creation
+        '''
         
-
+        '''
         ### verify and possibly create species (by 'Nome Científico')
-        if reg['Nome Científico'] not in species_set and reg['Nome Científico'] != "":
-            plant_creation = f"""
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{reg['Nome Científico']}
-            :{reg['Nome Científico']} rdf:type owl:NamedIndividual ,
-                            :Species ;
-                    :species_name "{reg['Espécie']}"^^xsd:string ;
-                    :scientific_name "{reg['Nome Científico']}"^^xsd:string .
-            """
-            species_set.add(reg['Nome Científico'])
-            ttl += plant_creation
+        new_name = str(reg['Nome Científico']).replace(' ', '_')
+        new_species = str(reg['Espécie']).replace(' ', '_')
 
+        if new_name not in species_set and new_name != "":
+            plant_creation = f"""
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_name}
+            :{new_name} rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "{new_species}"^^xsd:string ;
+                    :scientific_name "{new_name}"^^xsd:string .
+            """
+            species_set.add(new_name)
+            ttl += plant_creation
+        '''
+        '''
         ### verify and possibly create states (by 'Estado')
         if reg['Estado'] not in state_set and reg['Estado'] != "":
             company_creation = f"""
@@ -132,7 +142,6 @@ def main():
         ttl += regist_creation
         '''
 
-    print(ttl)
     out_f.write(ttl)
 
 if __name__ == "__main__":
