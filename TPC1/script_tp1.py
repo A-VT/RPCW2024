@@ -9,7 +9,7 @@ def main():
     f.close()
 
     shutil.copyfile("./TPC1/ontology_original.owl", "./TPC1/added_ontology.owl")
-    out_f = open("./TPC1/ontology_original.owl", "a")
+    out_f = open("./TPC1/added_ontology.owl", "a")
 
     #ttl creation
     ttl = ""
