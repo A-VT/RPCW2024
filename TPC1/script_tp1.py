@@ -56,20 +56,24 @@ def main():
         except:
             new_code = 0
 
+        new_freguesia = str(reg['Freguesia']).replace(' ', '_')
+        new_local = str(reg['Local']).replace(' ', '_')
+        new_street_name = str(reg['Rua']).replace(' ', '_')
+
         if new_code not in locations_set and new_code != 0:
             location_creation = f"""
-            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_code}
-            :{new_code} rdf:type owl:NamedIndividual ,
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#local_{new_code}
+            :local_{new_code} rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "{new_code}"^^xsd:int ;
-            :parish "{reg['Freguesia']}"^^xsd:string ;
-            :local "{reg['Local']}"^^xsd:string ;
-            :street_name "{reg['Rua']}"^^xsd:string .
+            :parish "{new_freguesia}"^^xsd:string ;
+            :local "{new_local}"^^xsd:string ;
+            :street_name "{new_street_name}"^^xsd:string .
             """
-            locations_set.add(new_code)
+            locations_set.add(f"local_{new_code}")
             ttl += location_creation
         '''
-        
+
         '''
         ### verify and possibly create species (by 'Nome Científico')
         new_name = str(reg['Nome Científico']).replace(' ', '_')
@@ -86,18 +90,21 @@ def main():
             species_set.add(new_name)
             ttl += plant_creation
         '''
-        '''
+
+        
         ### verify and possibly create states (by 'Estado')
         if reg['Estado'] not in state_set and reg['Estado'] != "":
-            company_creation = f"""
+            state_creation = f"""
             ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{reg['Estado']}
             :{reg['Estado']} rdf:type owl:NamedIndividual ,
                     :Estado ;
             :name_state "{reg['Estado']}"^^xsd:string .
             """
             state_set.add(reg['Estado'])
-            ttl += plant_creation
-        
+            ttl += state_creation
+
+
+        '''
         ### verify and possibly create plantations (by 'Origem')
         if reg['Origem'] not in companies_set and reg['Origem'] != "":
             company_creation = f"""

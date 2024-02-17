@@ -47,7 +47,8 @@ def main():
 
 
         # 6. Analysis of 'Nome Científico' e 'Espécie'
-        species, species_name = str(reg['Nome Científico']).replace(' ', '_'), str(reg['Espécie']).replace(' ', '_')
+        species = str(reg['Nome Científico']).replace(' ', '_')
+        species_name = str(reg['Espécie']).replace(' ', '_')
         # {species1: [{species_name1: 1, {species_name2: 3}; species2: {species_name1: 7}}
         if(species not in species_dic):
             species_dic[species] = { species_name : 1 }

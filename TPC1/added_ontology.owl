@@ -187,6 +187,16 @@
                             :Company ;
                     :company_name "DGEV"^^xsd:string .
             
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Adulto
+            :Adulto rdf:type owl:NamedIndividual ,
+                    :Estado ;
+            :name_state "Adulto"^^xsd:string .
+            
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Jovem
+            :Jovem rdf:type owl:NamedIndividual ,
+                    :Estado ;
+            :name_state "Jovem"^^xsd:string .
+            
             ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Não_é_municipal
             :Não_é_municipal rdf:type owl:NamedIndividual ,
                             :Company ;
@@ -201,6 +211,11 @@
             :CMC_Outros rdf:type owl:NamedIndividual ,
                             :Company ;
                     :company_name "CMC_Outros"^^xsd:string .
+            
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Velho
+            :Velho rdf:type owl:NamedIndividual ,
+                    :Estado ;
+            :name_state "Velho"^^xsd:string .
             
             ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Cascais_Envolvente
             :Cascais_Envolvente rdf:type owl:NamedIndividual ,
@@ -236,6 +251,11 @@
             :Loteador rdf:type owl:NamedIndividual ,
                             :Company ;
                     :company_name "Loteador"^^xsd:string .
+            
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Outro
+            :Outro rdf:type owl:NamedIndividual ,
+                    :Estado ;
+            :name_state "Outro"^^xsd:string .
             
             ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#Caldeira_vazia
             :Caldeira_vazia rdf:type owl:NamedIndividual ,
