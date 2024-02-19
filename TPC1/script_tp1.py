@@ -106,11 +106,15 @@ def main():
 
         ### supposing each register has a single unique plantation
         ### aka always a creation of a plantation for a register
+        line_planted = ""
+        if new_origin != "":
+            line_planted = f":planted_by :{new_origin} ;"
+        
         plantation_creation = f"""
         ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#plantation_{reg['Id']}
         :plantation_{reg['Id']} rdf:type owl:NamedIndividual ,
                      :Plantation ;
-            :planted_by :{new_origin} ;
+            {line_planted}
             :is_state :{reg['Estado']} ;
             :made_of :{new_name} ;
             :planter "{reg['Caldeira']}"^^xsd:string ;
@@ -120,22 +124,32 @@ def main():
         """
         ttl += plantation_creation
 
-        '''
+
+
+
         ### creation of the register
+        try:
+            new_int_numb = int(reg['Número de intervenções'])
+        except:
+            new_int_numb = 0
+
+        line_managed = ""
+        if new_gestor != "":
+            line_managed = f":managed_by :{new_gestor} ;"
+        # ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#regist_{reg['Id']}
         regist_creation = f"""
-        ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#regist_{reg['Gestor']}
-        :regist_{reg['Gestor']} rdf:type owl:NamedIndividual ,
+        :regist_{reg['Id']} rdf:type owl:NamedIndividual ,
                    :Register ;
-          :managed_by :{new_gestor} ;
+          {line_managed}
           :located_in :local_{new_code} ;
           :has_a :plantation_{reg['Id']} ;
           :date_update "{reg['Data de actualização']}"^^xsd:dateTime ;
-          :numb_interventions "{reg['Número de intervenções']}"^^xsd:int ;
+          :numb_interventions "{new_int_numb}"^^xsd:int ;
           :reg_number "{reg['Número de Registo']}"^^xsd:int ;
           :id "{reg['Id']}"^^xsd:int .
         """
         ttl += regist_creation
-        '''
+        
 
     out_f.write(ttl)
 
