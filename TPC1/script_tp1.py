@@ -104,7 +104,6 @@ def main():
             ttl += state_creation
 
 
-        '''
         ### supposing each register has a single unique plantation
         ### aka always a creation of a plantation for a register
         plantation_creation = f"""
@@ -121,14 +120,14 @@ def main():
         """
         ttl += plantation_creation
 
-        
+        '''
         ### creation of the register
         regist_creation = f"""
         ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#regist_{reg['Gestor']}
         :regist_{reg['Gestor']} rdf:type owl:NamedIndividual ,
                    :Register ;
-          :managed_by :{reg['Gestor']} ;
-          :located_in :{reg['Código de rua']} ;
+          :managed_by :{new_gestor} ;
+          :located_in :local_{new_code} ;
           :has_a :plantation_{reg['Id']} ;
           :date_update "{reg['Data de actualização']}"^^xsd:dateTime ;
           :numb_interventions "{reg['Número de intervenções']}"^^xsd:int ;
