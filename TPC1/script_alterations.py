@@ -8,14 +8,12 @@ def main():
     bd = json.load(f)
     f.close()
 
-    shutil.copyfile("./TPC1/ontology_original.owl", "./TPC1/added_ontology.owl")
-    out_f = open("./TPC1/added_ontology.owl", "a")
+    f = open("./TPC1/alterations.json")
 
     #ttl creation
     ttl = ""
 
     companies_set, locations_set, species_set, state_set = set(), set(), set(), set()
-    loc_id = set()
 
 
     ttl += """
@@ -28,9 +26,9 @@ def main():
 
         ### verify and possibly create companies (by 'Origem')
         new_origin = str(reg['Origem']).replace(' ', '_')
-        # ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_origin}
         if new_origin not in companies_set and new_origin != "":
             company_creation = f"""
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_origin}
             :{new_origin} rdf:type owl:NamedIndividual ,
                             :Company ;
                     :company_name "{new_origin}"^^xsd:string .
@@ -40,9 +38,9 @@ def main():
 
         ### verify and possibly create companies (by 'Gestor')
         new_gestor = str(reg['Gestor']).replace(' ', '_')
-        # ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_gestor}
         if new_gestor not in companies_set and new_gestor != "":
             company_creation = f"""
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_gestor}
             :{new_gestor} rdf:type owl:NamedIndividual ,
                             :Company ;
                     :company_name "{new_gestor}"^^xsd:string .
@@ -57,13 +55,13 @@ def main():
         except:
             new_code = 0
 
-        new_freguesia = str(reg['Freguesia']).replace(' ', '_').replace('"','\\"')
-        new_local = str(reg['Local']).replace(' ', '_').replace('"','\\"')
+        new_freguesia = str(reg['Freguesia']).replace(' ', '_')
+        new_local = str(reg['Local']).replace(' ', '_')
         new_street_name = str(reg['Rua']).replace(' ', '_').replace('"','\\"')
-        # ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#local_{new_code}
 
-        if f"local_{new_code}" not in locations_set and new_code != "local_0":
+        if new_code not in locations_set and new_code != 0:
             location_creation = f"""
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#local_{new_code}
             :local_{new_code} rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "{new_code}"^^xsd:int ;
@@ -73,19 +71,16 @@ def main():
             """
             locations_set.add(f"local_{new_code}")
             ttl += location_creation
-
-
         
 
-        '''
+        
         ### verify and possibly create species (by 'Nome Científico')
-        new_name = str(reg['Nome Científico']).replace(' ', '_').replace('"','\\"')
-        new_species = str(reg['Espécie']).replace(' ', '_').replace('"','\\"')
+        new_name = str(reg['Nome Científico']).replace(' ', '_')
+        new_species = str(reg['Espécie']).replace(' ', '_')
 
-
-        #  ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_name}
         if new_name not in species_set and new_name != "":
             plant_creation = f"""
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_name}
             :{new_name} rdf:type owl:NamedIndividual ,
                             :Species ;
                     :species_name "{new_species}"^^xsd:string ;
@@ -93,19 +88,19 @@ def main():
             """
             species_set.add(new_name)
             ttl += plant_creation
-        '''
+        
+
         
         ### verify and possibly create states (by 'Estado')
-        # ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{reg['Estado']}
         if reg['Estado'] not in state_set and reg['Estado'] != "":
             state_creation = f"""
+            ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{reg['Estado']}
             :{reg['Estado']} rdf:type owl:NamedIndividual ,
                     :Estado ;
             :name_state "{reg['Estado']}"^^xsd:string .
             """
             state_set.add(reg['Estado'])
             ttl += state_creation
-
 
         '''
         ### supposing each register has a single unique plantation
@@ -142,7 +137,6 @@ def main():
         '''
 
     out_f.write(ttl)
-    print(loc_id)
 
 if __name__ == "__main__":
     main()
