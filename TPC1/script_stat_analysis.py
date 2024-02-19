@@ -67,7 +67,7 @@ def main():
     stat_f.write(f"Number of Caldeira: {len(caldeira_lst)} | Caldeira: {caldeira_lst}\n")
     stat_f.write(f"Number of Tutor: {len(tutor_lst)} | Tutor: {tutor_lst}\n")
     stat_f.write(f"Number of Species: {len(species_dic)}\n")
-    stat_f.write(f"Annormal code_streets: {lst_code_street}\n")
+    stat_f.write(f"{len(lst_code_street)} Annormal code_streets: {lst_code_street}\n")
     stat_f.write(f"Species: {species_dic}\n")
 
     i = 0
