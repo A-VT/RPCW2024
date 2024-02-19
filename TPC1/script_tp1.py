@@ -25,7 +25,7 @@ def main():
     """
 
     for reg in bd:
-
+        
         ### verify and possibly create companies (by 'Origem')
         new_origin = str(reg['Origem']).replace(' ', '_')
         # ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_origin}
@@ -73,15 +73,11 @@ def main():
             """
             locations_set.add(f"local_{new_code}")
             ttl += location_creation
-
-
         
-
-        '''
+        
         ### verify and possibly create species (by 'Nome Científico')
-        new_name = str(reg['Nome Científico']).replace(' ', '_').replace('"','\\"')
-        new_species = str(reg['Espécie']).replace(' ', '_').replace('"','\\"')
-
+        new_name = str(reg['Nome Científico']).replace(' ', '_').replace('"','\\"').replace('.','\\.')
+        new_species = str(reg['Espécie']).replace(' ', '_').replace('"','\\"').replace('.','\\.')
 
         #  ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{new_name}
         if new_name not in species_set and new_name != "":
@@ -93,14 +89,15 @@ def main():
             """
             species_set.add(new_name)
             ttl += plant_creation
-        '''
+        
+        
         
         ### verify and possibly create states (by 'Estado')
         # ###  http://www.semanticweb.org/avt/ontologies/2024/1/untitled-ontology-3#{reg['Estado']}
         if reg['Estado'] not in state_set and reg['Estado'] != "":
             state_creation = f"""
             :{reg['Estado']} rdf:type owl:NamedIndividual ,
-                    :Estado ;
+                    :State ;
             :name_state "{reg['Estado']}"^^xsd:string .
             """
             state_set.add(reg['Estado'])
@@ -142,7 +139,6 @@ def main():
         '''
 
     out_f.write(ttl)
-    print(loc_id)
 
 if __name__ == "__main__":
     main()
