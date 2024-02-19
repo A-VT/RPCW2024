@@ -193,13 +193,28 @@
             :local "Zambujeiro"^^xsd:string ;
             :street_name "Rua_Júlio_Dinis"^^xsd:string .
             
+            :Pinus_pinea rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "pinheiro_manso"^^xsd:string ;
+                    :scientific_name "Pinus_pinea"^^xsd:string .
+            
             :Adulto rdf:type owl:NamedIndividual ,
-                    :Estado ;
+                    :State ;
             :name_state "Adulto"^^xsd:string .
             
             :Jovem rdf:type owl:NamedIndividual ,
-                    :Estado ;
+                    :State ;
             :name_state "Jovem"^^xsd:string .
+            
+            :Acer_negundo rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "bordo_negundo"^^xsd:string ;
+                    :scientific_name "Acer_negundo"^^xsd:string .
+            
+            :Melia_azedarach rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "melia"^^xsd:string ;
+                    :scientific_name "Melia_azedarach"^^xsd:string .
             
             :local_1708838 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -208,12 +223,27 @@
             :local "Murches"^^xsd:string ;
             :street_name "Rua_Guilherme_Manuel_Romão_(1939-2014)_Guilherme_Caracol-Empresá"^^xsd:string .
             
+            :Platanus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "platano"^^xsd:string ;
+                    :scientific_name "Platanus_sp\."^^xsd:string .
+            
+            :Acacia_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "acacia"^^xsd:string ;
+                    :scientific_name "Acacia_sp\."^^xsd:string .
+            
             :local_1668870 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1668870"^^xsd:int ;
             :parish "Alcabideche"^^xsd:string ;
             :local "Murches"^^xsd:string ;
             :street_name "Largo_Infante_Dom_Henrique"^^xsd:string .
+            
+            :Phoenix_canariensis rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "palmeira_das_canarias"^^xsd:string ;
+                    :scientific_name "Phoenix_canariensis"^^xsd:string .
             
             :local_1686417 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -228,6 +258,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Murches"^^xsd:string ;
             :street_name "Praceta_Padre_António_Vieira"^^xsd:string .
+            
+            :Olea_europaea rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "oliveira"^^xsd:string ;
+                    :scientific_name "Olea_europaea"^^xsd:string .
             
             :Não_é_municipal rdf:type owl:NamedIndividual ,
                             :Company ;
@@ -247,6 +282,16 @@
             :local "Zambujeiro"^^xsd:string ;
             :street_name "Rua_do_Outeiro"^^xsd:string .
             
+            :Citrus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "laranjeira"^^xsd:string ;
+                    :scientific_name "Citrus_sp\."^^xsd:string .
+            
+            :Ficus_elastica rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "Borracheira"^^xsd:string ;
+                    :scientific_name "Ficus_elastica"^^xsd:string .
+            
             :Cascais_Ambiente rdf:type owl:NamedIndividual ,
                             :Company ;
                     :company_name "Cascais_Ambiente"^^xsd:string .
@@ -257,6 +302,16 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Alcabideche"^^xsd:string ;
             :street_name "Avenida_de_Alcabideche"^^xsd:string .
+            
+            :Tilia_cordata rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "tilia_de_folhas_pequenas"^^xsd:string ;
+                    :scientific_name "Tilia_cordata"^^xsd:string .
+            
+            :Casuarina_equisetifolia rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "casuarina"^^xsd:string ;
+                    :scientific_name "Casuarina_equisetifolia"^^xsd:string .
             
             :local_1665573 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -286,12 +341,22 @@
             :local "Malveira_da_Serra"^^xsd:string ;
             :street_name "Estrada_Nacional_247"^^xsd:string .
             
+            :Eucalyptus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "eucalipto"^^xsd:string ;
+                    :scientific_name "Eucalyptus_sp\."^^xsd:string .
+            
             :local_1676460 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1676460"^^xsd:int ;
             :parish "Alcabideche"^^xsd:string ;
             :local "Manique_de_Baixo"^^xsd:string ;
             :street_name "Rua_das_Cabanas"^^xsd:string .
+            
+            :Olea_europaea_var_sylvestris rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "zambujeiro"^^xsd:string ;
+                    :scientific_name "Olea_europaea_var_sylvestris"^^xsd:string .
             
             :local_1673638 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -307,12 +372,42 @@
             :local "Manique_de_Baixo"^^xsd:string ;
             :street_name "Praceta_Nossa_Senhora_das_Neves"^^xsd:string .
             
+            :Fraxinus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "freixo"^^xsd:string ;
+                    :scientific_name "Fraxinus_sp\."^^xsd:string .
+            
+            :Celtis_australis rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "lodão"^^xsd:string ;
+                    :scientific_name "Celtis_australis"^^xsd:string .
+            
+            :Jacaranda_mimosifolia rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "Jacaranda"^^xsd:string ;
+                    :scientific_name "Jacaranda_mimosifolia"^^xsd:string .
+            
+            :Tilia_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "tilia"^^xsd:string ;
+                    :scientific_name "Tilia_sp\."^^xsd:string .
+            
+            :Pyrus_calleryana_var\._chanticleer rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "pereira_de_jardim"^^xsd:string ;
+                    :scientific_name "Pyrus_calleryana_var\._chanticleer"^^xsd:string .
+            
             :local_1667739 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1667739"^^xsd:int ;
             :parish "Alcabideche"^^xsd:string ;
             :local "Malveira_da_Serra"^^xsd:string ;
             :street_name "Calçada_da_Rampa"^^xsd:string .
+            
+            :Pinus_halepensis rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "pinheiro_do_alepo"^^xsd:string ;
+                    :scientific_name "Pinus_halepensis"^^xsd:string .
             
             :local_1667821 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -321,12 +416,22 @@
             :local "Serra_de_Sintra"^^xsd:string ;
             :street_name "Caminho_dos_Fetos"^^xsd:string .
             
+            :a_identificar rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "a_identificar"^^xsd:string ;
+                    :scientific_name "a_identificar"^^xsd:string .
+            
             :local_1673070 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1673070"^^xsd:int ;
             :parish "Alcabideche"^^xsd:string ;
             :local "Janes"^^xsd:string ;
             :street_name "Rua_das_Tomadas"^^xsd:string .
+            
+            :Pinus_sylvestris rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "pinheiro_silvestre"^^xsd:string ;
+                    :scientific_name "Pinus_sylvestris"^^xsd:string .
             
             :local_1676446 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -349,6 +454,11 @@
             :local "Malveira_da_Serra"^^xsd:string ;
             :street_name "Rua_da_Baronesa_de_Beck"^^xsd:string .
             
+            :Cupressus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "cipreste"^^xsd:string ;
+                    :scientific_name "Cupressus_sp\."^^xsd:string .
+            
             :local_1700033 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1700033"^^xsd:int ;
@@ -363,12 +473,27 @@
             :local "Murches"^^xsd:string ;
             :street_name "Rua_Almeida_Garrett"^^xsd:string .
             
+            :Prunus_cerasifera rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "ameixoeira_de_jardim"^^xsd:string ;
+                    :scientific_name "Prunus_cerasifera"^^xsd:string .
+            
             :local_1706539 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1706539"^^xsd:int ;
             :parish "Alcabideche"^^xsd:string ;
             :local "Murches"^^xsd:string ;
             :street_name "Rua_da_Finlândia"^^xsd:string .
+            
+            :Ligustrum__japonicum rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "ligustro"^^xsd:string ;
+                    :scientific_name "Ligustrum__japonicum"^^xsd:string .
+            
+            :Ficus_benjamina rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "ficus_benjamina"^^xsd:string ;
+                    :scientific_name "Ficus_benjamina"^^xsd:string .
             
             :local_2783827 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -405,6 +530,11 @@
             :local "Zambujeiro"^^xsd:string ;
             :street_name "Rua_da_Urze"^^xsd:string .
             
+            :Schinus_molle rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "pimenteira_bastarda"^^xsd:string ;
+                    :scientific_name "Schinus_molle"^^xsd:string .
+            
             :CMC_Outros rdf:type owl:NamedIndividual ,
                             :Company ;
                     :company_name "CMC_Outros"^^xsd:string .
@@ -436,6 +566,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Alcoitão"^^xsd:string ;
             :street_name "Rua_Lucília_do_Carmo_(Fadista)"^^xsd:string .
+            
+            :Populus_nigra rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "choupo_negro"^^xsd:string ;
+                    :scientific_name "Populus_nigra"^^xsd:string .
             
             :local_1688156 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -480,7 +615,7 @@
             :street_name "Praceta_da_Índia"^^xsd:string .
             
             :Velho rdf:type owl:NamedIndividual ,
-                    :Estado ;
+                    :State ;
             :name_state "Velho"^^xsd:string .
             
             :local_1683292 rdf:type owl:NamedIndividual ,
@@ -497,12 +632,37 @@
             :local "Bairro_da_Cruz_Vermelha"^^xsd:string ;
             :street_name "Rua_de_Angola"^^xsd:string .
             
+            :Acer_platanoides rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "bordo_da_noruega"^^xsd:string ;
+                    :scientific_name "Acer_platanoides"^^xsd:string .
+            
+            :Acer_pseudoplatanus rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "platano_bastardo"^^xsd:string ;
+                    :scientific_name "Acer_pseudoplatanus"^^xsd:string .
+            
+            :Prunus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "prunus"^^xsd:string ;
+                    :scientific_name "Prunus_sp\."^^xsd:string .
+            
             :local_1671412 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1671412"^^xsd:int ;
             :parish "Alcabideche"^^xsd:string ;
             :local "Bairro_da_Cruz_Vermelha"^^xsd:string ;
             :street_name "Praceta_de_Moçambique"^^xsd:string .
+            
+            :Cercis_siliquastrum rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "olaia"^^xsd:string ;
+                    :scientific_name "Cercis_siliquastrum"^^xsd:string .
+            
+            :Yucca_aloifolia rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "yuca"^^xsd:string ;
+                    :scientific_name "Yucca_aloifolia"^^xsd:string .
             
             :local_1676362 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -521,6 +681,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Bairro_da_Cruz_Vermelha"^^xsd:string ;
             :street_name "Rua_Almada_Negreiros"^^xsd:string .
+            
+            :Washingtonia_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "palmeira_de_leque"^^xsd:string ;
+                    :scientific_name "Washingtonia_sp\."^^xsd:string .
             
             :Junta_de_Freguesia rdf:type owl:NamedIndividual ,
                             :Company ;
@@ -565,6 +730,11 @@
                             :Company ;
                     :company_name "CMC"^^xsd:string .
             
+            :Salix_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "salgueiro"^^xsd:string ;
+                    :scientific_name "Salix_sp\."^^xsd:string .
+            
             :local_1688901 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1688901"^^xsd:int ;
@@ -600,6 +770,11 @@
             :local "Bicesse"^^xsd:string ;
             :street_name "Avenida_Ana_Rita_Abreu_Pereira_(1990-2013)_Bombeira_Voluntária_e"^^xsd:string .
             
+            :Pistacia_lentiscus rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "aroeira"^^xsd:string ;
+                    :scientific_name "Pistacia_lentiscus"^^xsd:string .
+            
             :local_1680234 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1680234"^^xsd:int ;
@@ -621,6 +796,21 @@
             :local "Manique_de_Baixo"^^xsd:string ;
             :street_name "Rua_dos_Bem_Lembrados"^^xsd:string .
             
+            :Eriobotrya_japonica rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "nespereira"^^xsd:string ;
+                    :scientific_name "Eriobotrya_japonica"^^xsd:string .
+            
+            :Robinia_pseudoacacia rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "acacia_bastarda"^^xsd:string ;
+                    :scientific_name "Robinia_pseudoacacia"^^xsd:string .
+            
+            :Tipuana_tipu rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "tipuana"^^xsd:string ;
+                    :scientific_name "Tipuana_tipu"^^xsd:string .
+            
             :local_1682766 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1682766"^^xsd:int ;
@@ -634,6 +824,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Bicesse"^^xsd:string ;
             :street_name "Rua_João_Villaret_-_Actor_(1913_-_1961)"^^xsd:string .
+            
+            :Grevillea_robusta rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "grevilia"^^xsd:string ;
+                    :scientific_name "Grevillea_robusta"^^xsd:string .
             
             :local_1702752 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -656,6 +851,11 @@
             :local "Linhó"^^xsd:string ;
             :street_name "Avenida_Pedro_Álvares_Cabral"^^xsd:string .
             
+            :Cupressus_sempervirens rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "cipreste_comum"^^xsd:string ;
+                    :scientific_name "Cupressus_sempervirens"^^xsd:string .
+            
             :local_1676509 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1676509"^^xsd:int ;
@@ -670,6 +870,11 @@
             :local "Alvide"^^xsd:string ;
             :street_name "Estrada_de_Alvide"^^xsd:string .
             
+            :Phoenix_dactylifera rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "tamareira"^^xsd:string ;
+                    :scientific_name "Phoenix_dactylifera"^^xsd:string .
+            
             :local_1690663 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1690663"^^xsd:int ;
@@ -677,12 +882,27 @@
             :local "Alvide"^^xsd:string ;
             :street_name "Rua_Pedro_Álvaro_de_Sousa"^^xsd:string .
             
+            :Sophora_japonica rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "acacia_do_japão"^^xsd:string ;
+                    :scientific_name "Sophora_japonica"^^xsd:string .
+            
             :local_1668447 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1668447"^^xsd:int ;
             :parish "Alcabideche"^^xsd:string ;
             :local "Carrascal_de_Alvide"^^xsd:string ;
             :street_name "Estrada_das_Tojas"^^xsd:string .
+            
+            :Pyrus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "pereira"^^xsd:string ;
+                    :scientific_name "Pyrus_sp\."^^xsd:string .
+            
+            :Populus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "choupo"^^xsd:string ;
+                    :scientific_name "Populus_sp\."^^xsd:string .
             
             :local_1666985 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -694,6 +914,11 @@
             :DGEV_CEVAR rdf:type owl:NamedIndividual ,
                             :Company ;
                     :company_name "DGEV_CEVAR"^^xsd:string .
+            
+            :Punica_granatum rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "romanzeira"^^xsd:string ;
+                    :scientific_name "Punica_granatum"^^xsd:string .
             
             :local_1689789 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -737,6 +962,21 @@
             :local "Alvide"^^xsd:string ;
             :street_name "Praceta_Dom_Pedro_I"^^xsd:string .
             
+            :Nerium_oleander rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "cevadilha"^^xsd:string ;
+                    :scientific_name "Nerium_oleander"^^xsd:string .
+            
+            :Ficus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "ficus"^^xsd:string ;
+                    :scientific_name "Ficus_sp\."^^xsd:string .
+            
+            :Magnolia_grandiflora rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "magnolia"^^xsd:string ;
+                    :scientific_name "Magnolia_grandiflora"^^xsd:string .
+            
             :local_1699628 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1699628"^^xsd:int ;
@@ -750,6 +990,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Pai_do_Vento"^^xsd:string ;
             :street_name "Praceta_Marquês_do_Soveral"^^xsd:string .
+            
+            :Gleditsia_triacanthos rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "espinheiro_da_virginia"^^xsd:string ;
+                    :scientific_name "Gleditsia_triacanthos"^^xsd:string .
             
             :local_1693341 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -765,12 +1010,22 @@
             :local "Amoreira"^^xsd:string ;
             :street_name "Rua_António_Carlos_Pereira_Frazão"^^xsd:string .
             
+            :Euonymus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "euonimus"^^xsd:string ;
+                    :scientific_name "Euonymus_sp\."^^xsd:string .
+            
             :local_1675953 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1675953"^^xsd:int ;
             :parish "Alcabideche"^^xsd:string ;
             :local "Carrascal_de_Alvide"^^xsd:string ;
             :street_name "Rua_Bernardino_Ribeiro"^^xsd:string .
+            
+            :Zelkova_carpinifolia rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "zelcova"^^xsd:string ;
+                    :scientific_name "Zelkova_carpinifolia"^^xsd:string .
             
             :local_1668957 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -856,6 +1111,11 @@
             :local "Adroana"^^xsd:string ;
             :street_name "Rua_Piaget"^^xsd:string .
             
+            :Acer_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "acer"^^xsd:string ;
+                    :scientific_name "Acer_sp\."^^xsd:string .
+            
             :local_1705926 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1705926"^^xsd:int ;
@@ -904,6 +1164,16 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Alcoitão"^^xsd:string ;
             :street_name "Rua_dos_Cheírinhos"^^xsd:string .
+            
+            :Populus_alba rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "choupo_branco"^^xsd:string ;
+                    :scientific_name "Populus_alba"^^xsd:string .
+            
+            :Ulmus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "ulmeiro"^^xsd:string ;
+                    :scientific_name "Ulmus_sp\."^^xsd:string .
             
             :local_1685592 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -975,6 +1245,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Pau_Gordo"^^xsd:string ;
             :street_name "Quinta_das_Antas"^^xsd:string .
+            
+            :Prunus_persica rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "pessegueiro"^^xsd:string ;
+                    :scientific_name "Prunus_persica"^^xsd:string .
             
             :local_1680551 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -1165,6 +1440,11 @@
             :local "Adroana"^^xsd:string ;
             :street_name "Rua_Pedro_Nunes"^^xsd:string .
             
+            :Quercus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "carvalho"^^xsd:string ;
+                    :scientific_name "Quercus_sp\."^^xsd:string .
+            
             :local_1669448 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1669448"^^xsd:int ;
@@ -1178,6 +1458,16 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Alcabideche"^^xsd:string ;
             :street_name "Praceta_Maria_Lamas"^^xsd:string .
+            
+            :Catalpa_bignonioides rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "catalpa"^^xsd:string ;
+                    :scientific_name "Catalpa_bignonioides"^^xsd:string .
+            
+            :Abies_alba rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "abeto_branco"^^xsd:string ;
+                    :scientific_name "Abies_alba"^^xsd:string .
             
             :local_1671434 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -1220,6 +1510,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Atibá"^^xsd:string ;
             :street_name "Rua_Vitorino_Nemésio"^^xsd:string .
+            
+            :Bougainvillea_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "buganvilia"^^xsd:string ;
+                    :scientific_name "Bougainvillea_sp\."^^xsd:string .
             
             :local_1703115 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -1347,6 +1642,16 @@
             :local "Alcabideche"^^xsd:string ;
             :street_name "Praceta_de_São_Vicente"^^xsd:string .
             
+            :Brachychiton_populneum rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "árvore_do_gelo"^^xsd:string ;
+                    :scientific_name "Brachychiton_populneum"^^xsd:string .
+            
+            :Metrosideros_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "metrosidero"^^xsd:string ;
+                    :scientific_name "Metrosideros_sp\."^^xsd:string .
+            
             :local_1690036 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1690036"^^xsd:int ;
@@ -1410,12 +1715,22 @@
             :local "Alcabideche"^^xsd:string ;
             :street_name "Rua_da_Carangueja"^^xsd:string .
             
+            :Ginkgo_biloba rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "ginkgo"^^xsd:string ;
+                    :scientific_name "Ginkgo_biloba"^^xsd:string .
+            
             :local_1693978 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1693978"^^xsd:int ;
             :parish "Alcabideche"^^xsd:string ;
             :local "Amoreira"^^xsd:string ;
             :street_name "Rua_Salgueiro_Maia"^^xsd:string .
+            
+            :Ailanthus_altissima rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "ailanto"^^xsd:string ;
+                    :scientific_name "Ailanthus_altissima"^^xsd:string .
             
             :local_1694570 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -1437,6 +1752,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Alvide"^^xsd:string ;
             :street_name "Rua_Particular"^^xsd:string .
+            
+            :Photinia_serrulata rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "photinia"^^xsd:string ;
+                    :scientific_name "Photinia_serrulata"^^xsd:string .
             
             :local_1693323 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -1465,6 +1785,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Abuxarda"^^xsd:string ;
             :street_name "Rua_Palmira_Dantas"^^xsd:string .
+            
+            :Persea_americana rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "abacateiro"^^xsd:string ;
+                    :scientific_name "Persea_americana"^^xsd:string .
             
             :local_1691307 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -1528,6 +1853,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Alcabideche"^^xsd:string ;
             :street_name "Rua_da_Palma"^^xsd:string .
+            
+            :Trachycarpus_fortunei rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "palmeira_da_china"^^xsd:string ;
+                    :scientific_name "Trachycarpus_fortunei"^^xsd:string .
             
             :local_1688007 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -1613,6 +1943,11 @@
             :local "Manique_de_Baixo"^^xsd:string ;
             :street_name "Rua_Nova_dos_Moinhos"^^xsd:string .
             
+            :Cupressus_lusitanica rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "cedro_do_buçaco"^^xsd:string ;
+                    :scientific_name "Cupressus_lusitanica"^^xsd:string .
+            
             :local_1676927 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1676927"^^xsd:int ;
@@ -1640,6 +1975,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Bicesse"^^xsd:string ;
             :street_name "Rua_do_Universo"^^xsd:string .
+            
+            :Tamarix_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "tamargueira"^^xsd:string ;
+                    :scientific_name "Tamarix_sp\."^^xsd:string .
             
             :local_1706774 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -1675,6 +2015,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Alcoitão"^^xsd:string ;
             :street_name "Rua_dos_Lombos"^^xsd:string .
+            
+            :Acer_campestre rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "bordo_comum"^^xsd:string ;
+                    :scientific_name "Acer_campestre"^^xsd:string .
             
             :local_2727238 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -1785,6 +2130,11 @@
             :local "Birre"^^xsd:string ;
             :street_name "Rua_das_Gardénias"^^xsd:string .
             
+            :Melaleuca_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "melaleuca"^^xsd:string ;
+                    :scientific_name "Melaleuca_sp\."^^xsd:string .
+            
             :local_1691390 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1691390"^^xsd:int ;
@@ -1834,12 +2184,27 @@
             :local "Aldeia_de_Juzo"^^xsd:string ;
             :street_name "Rua_António_Sérgio"^^xsd:string .
             
+            :Tilia_tomentosa rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "tilia_prateada"^^xsd:string ;
+                    :scientific_name "Tilia_tomentosa"^^xsd:string .
+            
+            :Castanea_sativa rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "castanheiro"^^xsd:string ;
+                    :scientific_name "Castanea_sativa"^^xsd:string .
+            
             :local_1699887 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1699887"^^xsd:int ;
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Outeiro_da_Vela"^^xsd:string ;
             :street_name "Rua_Professor_Agostinho_da_Silva"^^xsd:string .
+            
+            :Myoporum_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "mioporum"^^xsd:string ;
+                    :scientific_name "Myoporum_sp\."^^xsd:string .
             
             :local_1684160 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -1904,6 +2269,11 @@
             :local "Abuxarda"^^xsd:string ;
             :street_name "Rua_José_da_Silva_Seguro_(1930-2006)"^^xsd:string .
             
+            :Cydonia_oblonga rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "marmeleiro"^^xsd:string ;
+                    :scientific_name "Cydonia_oblonga"^^xsd:string .
+            
             :local_1698037 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1698037"^^xsd:int ;
@@ -1917,6 +2287,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Alcabideche"^^xsd:string ;
             :street_name "Rua_Dr._João_António_Gonçalves_Amaral"^^xsd:string .
+            
+            :Elaeagnus_angustifolia rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "oliveira_do_paraíso"^^xsd:string ;
+                    :scientific_name "Elaeagnus_angustifolia"^^xsd:string .
             
             :local_1700736 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -2009,6 +2384,11 @@
             :local "Alcabideche"^^xsd:string ;
             :street_name "Praceta_Manuel_dos_Santos"^^xsd:string .
             
+            :x_Cupressocyparis_leylandii rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "cupressocyparis"^^xsd:string ;
+                    :scientific_name "x_Cupressocyparis_leylandii"^^xsd:string .
+            
             :local_1705585 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1705585"^^xsd:int ;
@@ -2022,6 +2402,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Alcabideche"^^xsd:string ;
             :street_name "Praceta_Soldados_da_Paz"^^xsd:string .
+            
+            :Liriodendron_tulipifera rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "tulipeiro"^^xsd:string ;
+                    :scientific_name "Liriodendron_tulipifera"^^xsd:string .
             
             :local_1705605 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -2051,6 +2436,11 @@
             :local "Bairro_da_Cruz_Vermelha"^^xsd:string ;
             :street_name "Rua_Beatriz_Costa"^^xsd:string .
             
+            :Callistemon_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "Limpa-garrafas"^^xsd:string ;
+                    :scientific_name "Callistemon_sp\."^^xsd:string .
+            
             :local_1681435 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1681435"^^xsd:int ;
@@ -2079,6 +2469,16 @@
             :local "Alcoitão"^^xsd:string ;
             :street_name "Rua_Ricardo_Bensaúde"^^xsd:string .
             
+            :Viburnum_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "viburnum"^^xsd:string ;
+                    :scientific_name "Viburnum_sp\."^^xsd:string .
+            
+            :Arbutus_unedo rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "medronheiro"^^xsd:string ;
+                    :scientific_name "Arbutus_unedo"^^xsd:string .
+            
             :local_1692334 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1692334"^^xsd:int ;
@@ -2093,6 +2493,11 @@
             :local "Alcabideche"^^xsd:string ;
             :street_name "Praceta_Valentim_Henrique"^^xsd:string .
             
+            :Quercus_suber rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "sobreiro"^^xsd:string ;
+                    :scientific_name "Quercus_suber"^^xsd:string .
+            
             :local_1669667 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1669667"^^xsd:int ;
@@ -2106,6 +2511,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Cascais"^^xsd:string ;
             :street_name "Avenida_da_Argentina"^^xsd:string .
+            
+            :Dombeya_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "dombeia"^^xsd:string ;
+                    :scientific_name "Dombeya_sp\."^^xsd:string .
             
             :local_1669420 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -2128,6 +2538,16 @@
             :local "Aldeia_de_Juzo"^^xsd:string ;
             :street_name "Praceta_Alexandre_Herculano"^^xsd:string .
             
+            :Laurus_nobilis rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "loureiro"^^xsd:string ;
+                    :scientific_name "Laurus_nobilis"^^xsd:string .
+            
+            :Citrus_limon rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "limoeiro"^^xsd:string ;
+                    :scientific_name "Citrus_limon"^^xsd:string .
+            
             :local_1670577 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1670577"^^xsd:int ;
@@ -2142,8 +2562,13 @@
             :local "Cascais"^^xsd:string ;
             :street_name "Alameda_Duquesa_de_Palmela"^^xsd:string .
             
+            :Celtis_occidentalis rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "Lodão_americano"^^xsd:string ;
+                    :scientific_name "Celtis_occidentalis"^^xsd:string .
+            
             :Outro rdf:type owl:NamedIndividual ,
-                    :Estado ;
+                    :State ;
             :name_state "Outro"^^xsd:string .
             
             :local_1669491 rdf:type owl:NamedIndividual ,
@@ -2159,6 +2584,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Cascais"^^xsd:string ;
             :street_name "Alameda_dos_Combatentes_da_Grande_Guerra"^^xsd:string .
+            
+            :Washingtonia_filifera rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "washingtonia_filifera"^^xsd:string ;
+                    :scientific_name "Washingtonia_filifera"^^xsd:string .
             
             :local_1682167 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -2194,6 +2624,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Cascais"^^xsd:string ;
             :street_name "Praça_João_Martinho_de_Freitas"^^xsd:string .
+            
+            :Ficus_carica rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "figueira"^^xsd:string ;
+                    :scientific_name "Ficus_carica"^^xsd:string .
             
             :local_1673182 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -2265,6 +2700,11 @@
             :local "Guia"^^xsd:string ;
             :street_name "Rua_das_Acácias"^^xsd:string .
             
+            :Thuja_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "tuia"^^xsd:string ;
+                    :scientific_name "Thuja_sp\."^^xsd:string .
+            
             :local_1695409 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1695409"^^xsd:int ;
@@ -2320,6 +2760,16 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Pampilheira"^^xsd:string ;
             :street_name "Travessa_das_Comunidades_Europeias"^^xsd:string .
+            
+            :Pittosporum_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "pittosporum"^^xsd:string ;
+                    :scientific_name "Pittosporum_sp\."^^xsd:string .
+            
+            :Morus_nigra rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "amoreira_negra"^^xsd:string ;
+                    :scientific_name "Morus_nigra"^^xsd:string .
             
             :local_1680517 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -2412,6 +2862,11 @@
             :local "Bairro__Santana"^^xsd:string ;
             :street_name "Rua_de_Santa_Marta"^^xsd:string .
             
+            :Araucaria_araucana rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "araucaria_do_chile"^^xsd:string ;
+                    :scientific_name "Araucaria_araucana"^^xsd:string .
+            
             :local_1688172 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1688172"^^xsd:int ;
@@ -2453,6 +2908,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Cascais"^^xsd:string ;
             :street_name "Avenida_Emídio_Navarro"^^xsd:string .
+            
+            :Koelreuteria_paniculata rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "balão_de_s\._joão"^^xsd:string ;
+                    :scientific_name "Koelreuteria_paniculata"^^xsd:string .
             
             :local_1666002 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -2530,6 +2990,16 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Torre"^^xsd:string ;
             :street_name "Rua_do_Estorninho"^^xsd:string .
+            
+            :Fraxinus_excelsior rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "freixo_europeu"^^xsd:string ;
+                    :scientific_name "Fraxinus_excelsior"^^xsd:string .
+            
+            :Populus_X_canadensis rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "choupo_hibrido"^^xsd:string ;
+                    :scientific_name "Populus_X_canadensis"^^xsd:string .
             
             :local_1674681 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -2692,6 +3162,11 @@
             :local "Cascais"^^xsd:string ;
             :street_name "Rua_do_Alcaide"^^xsd:string .
             
+            :Lagerstroemia_indica rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "lagerstroemia"^^xsd:string ;
+                    :scientific_name "Lagerstroemia_indica"^^xsd:string .
+            
             :local_1674207 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1674207"^^xsd:int ;
@@ -2818,6 +3293,11 @@
             :local "Cascais"^^xsd:string ;
             :street_name "Rua_José_Florindo"^^xsd:string .
             
+            :Quercus_robur rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "carvalho_alvarinho"^^xsd:string ;
+                    :scientific_name "Quercus_robur"^^xsd:string .
+            
             :local_1695686 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1695686"^^xsd:int ;
@@ -2863,6 +3343,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Aldeia_de_Juzo"^^xsd:string ;
             :street_name "Rua_Roque_Gameiro"^^xsd:string .
+            
+            :Ceratonia_siliqua rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "alfarrobeira"^^xsd:string ;
+                    :scientific_name "Ceratonia_siliqua"^^xsd:string .
             
             :local_1666417 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -2997,6 +3482,11 @@
             :local "Aldeia_de_Juzo"^^xsd:string ;
             :street_name "Rua_Luís_de_Camões"^^xsd:string .
             
+            :Morus_alba rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "amoreira_branca"^^xsd:string ;
+                    :scientific_name "Morus_alba"^^xsd:string .
+            
             :local_1687234 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1687234"^^xsd:int ;
@@ -3025,6 +3515,11 @@
             :local "Charneca"^^xsd:string ;
             :street_name "Rua_Luís_Dourdil"^^xsd:string .
             
+            :Ficus_macrophylla rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "figueira_da_australia"^^xsd:string ;
+                    :scientific_name "Ficus_macrophylla"^^xsd:string .
+            
             :local_1688802 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1688802"^^xsd:int ;
@@ -3038,6 +3533,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Bairro_do_Rosário"^^xsd:string ;
             :street_name "Rua_Afonso_Baldaia"^^xsd:string .
+            
+            :Cupressus_macrocarpa rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "cipreste_de_monterey"^^xsd:string ;
+                    :scientific_name "Cupressus_macrocarpa"^^xsd:string .
             
             :local_1701030 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -3186,6 +3686,11 @@
             :local "Cascais"^^xsd:string ;
             :street_name "Praceta_Nossa_Senhora_dos_Navegantes"^^xsd:string .
             
+            :Prunus_dulcis rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "amendoeira"^^xsd:string ;
+                    :scientific_name "Prunus_dulcis"^^xsd:string .
+            
             :local_1690755 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1690755"^^xsd:int ;
@@ -3263,6 +3768,21 @@
             :local "Aldeia_de_Juzo"^^xsd:string ;
             :street_name "Rua_Almeida_Garrett"^^xsd:string .
             
+            :Cedrus_atlantica rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "cedro_do_atlas"^^xsd:string ;
+                    :scientific_name "Cedrus_atlantica"^^xsd:string .
+            
+            :Chamaerops_humilis rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "palmeira_de_vassouras"^^xsd:string ;
+                    :scientific_name "Chamaerops_humilis"^^xsd:string .
+            
+            :Plumeria_sp rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "plumeria"^^xsd:string ;
+                    :scientific_name "Plumeria_sp"^^xsd:string .
+            
             :local_1696290 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1696290"^^xsd:int ;
@@ -3326,6 +3846,11 @@
             :local "Cascais"^^xsd:string ;
             :street_name "Rua_António_Quadros"^^xsd:string .
             
+            :Aesculus_hippocastanum rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "castanheiro_da_india"^^xsd:string ;
+                    :scientific_name "Aesculus_hippocastanum"^^xsd:string .
+            
             :local_1701528 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1701528"^^xsd:int ;
@@ -3339,6 +3864,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Bairro_do_Rosário"^^xsd:string ;
             :street_name "Travessa_da_República"^^xsd:string .
+            
+            :Palmaceae_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "Palmeira"^^xsd:string ;
+                    :scientific_name "Palmaceae_sp\."^^xsd:string .
             
             :local_1700233 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -3473,6 +4003,11 @@
             :local "Cascais"^^xsd:string ;
             :street_name "Rua_António_da_Silva"^^xsd:string .
             
+            :Populus_tremula rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "choupo_tremedor"^^xsd:string ;
+                    :scientific_name "Populus_tremula"^^xsd:string .
+            
             :local_1684407 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1684407"^^xsd:int ;
@@ -3535,6 +4070,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Cascais"^^xsd:string ;
             :street_name "Rua_Marques_Leal_Pancada"^^xsd:string .
+            
+            :Citrus_x_sinensis rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "laranjeira_doce"^^xsd:string ;
+                    :scientific_name "Citrus_x_sinensis"^^xsd:string .
             
             :local_1674625 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -3612,6 +4152,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Cascais"^^xsd:string ;
             :street_name "Rua_de_Nossa_Senhora_dos_Navegantes"^^xsd:string .
+            
+            :Prunus_domestica rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "ameixeira"^^xsd:string ;
+                    :scientific_name "Prunus_domestica"^^xsd:string .
             
             :local_1682210 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -3724,6 +4269,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Cascais"^^xsd:string ;
             :street_name "Largo_Doutor_Passos_Vela"^^xsd:string .
+            
+            :Chorisia_speciosa rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "chorisia"^^xsd:string ;
+                    :scientific_name "Chorisia_speciosa"^^xsd:string .
             
             :local_1669394 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -3934,6 +4484,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Guia"^^xsd:string ;
             :street_name "Rua_dos_Ulmeiros"^^xsd:string .
+            
+            :Roystonea_sp rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "roystonea"^^xsd:string ;
+                    :scientific_name "Roystonea_sp"^^xsd:string .
             
             :local_1700461 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -4166,6 +4721,11 @@
             :local "Fontaínhas"^^xsd:string ;
             :street_name "Travessa_Doutor_Luís_Filipe_Quintela"^^xsd:string .
             
+            :Datura_carnea rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "trombeteiro"^^xsd:string ;
+                    :scientific_name "Datura_carnea"^^xsd:string .
+            
             :local_1680644 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1680644"^^xsd:int ;
@@ -4193,6 +4753,26 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Cascais"^^xsd:string ;
             :street_name "Rua_Luís_Xavier_Palmeirim"^^xsd:string .
+            
+            :Thuja_plicata rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "tuia-gigante"^^xsd:string ;
+                    :scientific_name "Thuja_plicata"^^xsd:string .
+            
+            :Buxus_sempervirens rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "buxo"^^xsd:string ;
+                    :scientific_name "Buxus_sempervirens"^^xsd:string .
+            
+            :Malus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "macieira"^^xsd:string ;
+                    :scientific_name "Malus_sp\."^^xsd:string .
+            
+            :Pinus_pinaster rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "pinheiro_bravo"^^xsd:string ;
+                    :scientific_name "Pinus_pinaster"^^xsd:string .
             
             :local_1689494 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -4383,6 +4963,11 @@
             :local "Checlos"^^xsd:string ;
             :street_name "Avenida_Doutor_Francisco_Sá_Carneiro"^^xsd:string .
             
+            :Ficus_microcarpa rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "figueira_asiatica"^^xsd:string ;
+                    :scientific_name "Ficus_microcarpa"^^xsd:string .
+            
             :local_1669632 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1669632"^^xsd:int ;
@@ -4466,6 +5051,11 @@
             :parish "U.F._Carcavelos_e_Parede"^^xsd:string ;
             :local "Sassoeiros"^^xsd:string ;
             :street_name "Rua_do_Jasmim"^^xsd:string .
+            
+            :Picea_abies rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "abeto_do_norte"^^xsd:string ;
+                    :scientific_name "Picea_abies"^^xsd:string .
             
             :local_1669336 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -5020,6 +5610,11 @@
             :local "Lombos_Sul"^^xsd:string ;
             :street_name "Rua_Eusébio_Ferreira"^^xsd:string .
             
+            :Betula_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "betula"^^xsd:string ;
+                    :scientific_name "Betula_sp\."^^xsd:string .
+            
             :local_1680657 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1680657"^^xsd:int ;
@@ -5062,6 +5657,11 @@
             :local "Quinta_da_Alagoa"^^xsd:string ;
             :street_name "Praça_Frei_Hermano_da_Câmara"^^xsd:string .
             
+            :Schinus_terebinthifolius rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "aroeira_vermelha"^^xsd:string ;
+                    :scientific_name "Schinus_terebinthifolius"^^xsd:string .
+            
             :local_1670570 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1670570"^^xsd:int ;
@@ -5082,6 +5682,11 @@
             :parish "U.F._Carcavelos_e_Parede"^^xsd:string ;
             :local "Quinta_da_Alagoa"^^xsd:string ;
             :street_name "Praceta_Juiz_Carlos_Lopes_Quadros"^^xsd:string .
+            
+            :Alnus_glutinosa rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "amieiro"^^xsd:string ;
+                    :scientific_name "Alnus_glutinosa"^^xsd:string .
             
             :local_1685000 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -5664,6 +6269,11 @@
             :local "Checlos"^^xsd:string ;
             :street_name "Rotunda_de_São_Miguel_das_Encostas"^^xsd:string .
             
+            :Prunus_serrulata rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "cerejeira_japonesa"^^xsd:string ;
+                    :scientific_name "Prunus_serrulata"^^xsd:string .
+            
             :local_1698686 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1698686"^^xsd:int ;
@@ -5810,6 +6420,11 @@
             :parish "São_Domingos_de_Rana"^^xsd:string ;
             :local "São_Domingos_de_Rana"^^xsd:string ;
             :street_name "Rua_Lápis-Lazuli"^^xsd:string .
+            
+            :Liquidambar_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "liquidambar"^^xsd:string ;
+                    :scientific_name "Liquidambar_sp\."^^xsd:string .
             
             :local_1667432 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -6196,6 +6811,11 @@
             :local "Outeiro_de_Polima"^^xsd:string ;
             :street_name "Rua_Guilhermina_Suggia"^^xsd:string .
             
+            :Washingtonia_robusta rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "washingtonia_robusta"^^xsd:string ;
+                    :scientific_name "Washingtonia_robusta"^^xsd:string .
+            
             :local_1683345 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1683345"^^xsd:int ;
@@ -6287,6 +6907,11 @@
             :local "Abóboda"^^xsd:string ;
             :street_name "Rua_Alfredo_da_Silva"^^xsd:string .
             
+            :Musa_cavendishii rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "bananeira"^^xsd:string ;
+                    :scientific_name "Musa_cavendishii"^^xsd:string .
+            
             :local_1693442 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1693442"^^xsd:int ;
@@ -6335,6 +6960,11 @@
             :parish "São_Domingos_de_Rana"^^xsd:string ;
             :local "Abóboda"^^xsd:string ;
             :street_name "Praça_David_Mourão_Ferreira"^^xsd:string .
+            
+            :Sophora_japonica_var\._pyramidalis rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "sophora_pyramidalis"^^xsd:string ;
+                    :scientific_name "Sophora_japonica_var\._pyramidalis"^^xsd:string .
             
             :local_1706334 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -6496,6 +7126,11 @@
             :parish "São_Domingos_de_Rana"^^xsd:string ;
             :local "Trajouce"^^xsd:string ;
             :street_name "Largo_Sete_de_Junho_de_Mil_Trezentos_e_Sessenta_e_Quatro"^^xsd:string .
+            
+            :Morus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "amoreira"^^xsd:string ;
+                    :scientific_name "Morus_sp\."^^xsd:string .
             
             :local_1688922 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -7001,6 +7636,11 @@
             :parish "São_Domingos_de_Rana"^^xsd:string ;
             :local "São_Domingos_de_Rana"^^xsd:string ;
             :street_name "Rua_do_Cotovelo"^^xsd:string .
+            
+            :Diospyros_kaki rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "diospiro"^^xsd:string ;
+                    :scientific_name "Diospyros_kaki"^^xsd:string .
             
             :local_1691367 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -8234,6 +8874,11 @@
             :local "Tires"^^xsd:string ;
             :street_name "Rua_António_Aleixo"^^xsd:string .
             
+            :Euphorbia_pulcherrima rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "planta_do_natal"^^xsd:string ;
+                    :scientific_name "Euphorbia_pulcherrima"^^xsd:string .
+            
             :local_1680579 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1680579"^^xsd:int ;
@@ -8471,6 +9116,11 @@
             :parish "São_Domingos_de_Rana"^^xsd:string ;
             :local "São_Domingos_de_Rana"^^xsd:string ;
             :street_name "Praceta_da_Nova_Aliança"^^xsd:string .
+            
+            :Hibiscus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "Hibisco"^^xsd:string ;
+                    :scientific_name "Hibiscus_sp\."^^xsd:string .
             
             :local_1706369 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -8906,6 +9556,11 @@
             :local "Parede"^^xsd:string ;
             :street_name "Rua_Vasco_da_Gama"^^xsd:string .
             
+            :Dracaena_draco rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "dragoeiro"^^xsd:string ;
+                    :scientific_name "Dracaena_draco"^^xsd:string .
+            
             :local_1693933 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1693933"^^xsd:int ;
@@ -9290,6 +9945,11 @@
             :parish "U.F._Carcavelos_e_Parede"^^xsd:string ;
             :local "Parede"^^xsd:string ;
             :street_name "Rua_Carlos_Botelho"^^xsd:string .
+            
+            :Citrus_aurantium rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "laranjeira_azeda"^^xsd:string ;
+                    :scientific_name "Citrus_aurantium"^^xsd:string .
             
             :local_1699928 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -9731,6 +10391,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Estoril"^^xsd:string ;
             :street_name "Avenida_Dom_Nuno_Álvares_Pereira"^^xsd:string .
+            
+            :Catalpa_bungei rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "catalpa_bola"^^xsd:string ;
+                    :scientific_name "Catalpa_bungei"^^xsd:string .
             
             :local_1668698 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -11069,6 +11734,11 @@
             :local "Janes"^^xsd:string ;
             :street_name "Largo_de_Janes"^^xsd:string .
             
+            :Prunus_laurocerasus rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "loureiro_real"^^xsd:string ;
+                    :scientific_name "Prunus_laurocerasus"^^xsd:string .
+            
             :local_1702375 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1702375"^^xsd:int ;
@@ -11145,6 +11815,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Pampilheira"^^xsd:string ;
             :street_name "Rua_do_Bairro_Operário_José_Luís"^^xsd:string .
+            
+            :Bambu_sp rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "bambu"^^xsd:string ;
+                    :scientific_name "Bambu_sp"^^xsd:string .
             
             :local_1677579 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -11306,6 +11981,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Alcoitão"^^xsd:string ;
             :street_name "Rua_Nossa_Senhora_da_Conceição"^^xsd:string .
+            
+            :Brachychiton_acerifolium rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "árvore_do_fogo"^^xsd:string ;
+                    :scientific_name "Brachychiton_acerifolium"^^xsd:string .
             
             :local_1668340 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -11600,6 +12280,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Cascais"^^xsd:string ;
             :street_name "Avenida_da_Venezuela"^^xsd:string .
+            
+            :Pinus_canariensis rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "pinheiro_das_canarias"^^xsd:string ;
+                    :scientific_name "Pinus_canariensis"^^xsd:string .
             
             :local_1690375 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -12021,6 +12706,11 @@
             :local "Amoreira"^^xsd:string ;
             :street_name "Avenida_do_Ultramar"^^xsd:string .
             
+            :Albizia_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "albizia"^^xsd:string ;
+                    :scientific_name "Albizia_sp\."^^xsd:string .
+            
             :local_1689144 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1689144"^^xsd:int ;
@@ -12111,6 +12801,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Bairro_do_Rosário"^^xsd:string ;
             :street_name "Rua_Guilherme_Salgado"^^xsd:string .
+            
+            :Quercus_x_rosacea rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "carvalho_hibrido"^^xsd:string ;
+                    :scientific_name "Quercus_x_rosacea"^^xsd:string .
             
             :local_1680563 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -12203,6 +12898,11 @@
             :local "Birre"^^xsd:string ;
             :street_name "Rua_Cesário_Verde"^^xsd:string .
             
+            :Erythrina_crista-galli rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "eritrina_crista-de-galo"^^xsd:string ;
+                    :scientific_name "Erythrina_crista-galli"^^xsd:string .
+            
             :local_2467296 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "2467296"^^xsd:int ;
@@ -12230,6 +12930,11 @@
             :parish "São_Domingos_de_Rana"^^xsd:string ;
             :local "Tires"^^xsd:string ;
             :street_name "Rua_João_Aguardela_(1969-2009)"^^xsd:string .
+            
+            :Carpinus_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "Carpino"^^xsd:string ;
+                    :scientific_name "Carpinus_sp\."^^xsd:string .
             
             :local_1667877 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -12423,6 +13128,16 @@
             :parish "São_Domingos_de_Rana"^^xsd:string ;
             :local "São_Domingos_de_Rana"^^xsd:string ;
             :street_name "Rua_Quinta_dos_Gafanhotos"^^xsd:string .
+            
+            :Acer_saccharinum rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "Bordo_Prateado"^^xsd:string ;
+                    :scientific_name "Acer_saccharinum"^^xsd:string .
+            
+            :Biota rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "Biota"^^xsd:string ;
+                    :scientific_name "Biota"^^xsd:string .
             
             :local_1687485 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -12619,6 +13334,11 @@
             :parish "São_Domingos_de_Rana"^^xsd:string ;
             :local "Rana"^^xsd:string ;
             :street_name "Praceta_Moinhos_de_Rana"^^xsd:string .
+            
+            :arbusto rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "arbusto"^^xsd:string ;
+                    :scientific_name "arbusto"^^xsd:string .
             
             :local_1694982 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -12892,6 +13612,16 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Malveira_da_Serra"^^xsd:string ;
             :street_name "Rua_da_Escola_Nova"^^xsd:string .
+            
+            :Fagus_sylvatica rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "faia"^^xsd:string ;
+                    :scientific_name "Fagus_sylvatica"^^xsd:string .
+            
+            :Cedrus_sp rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "cedro"^^xsd:string ;
+                    :scientific_name "Cedrus_sp"^^xsd:string .
             
             :local_1680054 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -13383,6 +14113,11 @@
             :local "Tires"^^xsd:string ;
             :street_name "Rua_Luís_de_Camões"^^xsd:string .
             
+            :Paulownia_tomentosa rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "paulonia"^^xsd:string ;
+                    :scientific_name "Paulownia_tomentosa"^^xsd:string .
+            
             :local_1668076 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1668076"^^xsd:int ;
@@ -13537,12 +14272,22 @@
             :local "São_João_do_Estoril"^^xsd:string ;
             :street_name "Rotunda_Padre_Ricardo_Neves_(15/09/1972-06/08/2015)"^^xsd:string .
             
+            :Camellia_sp rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "cameleira"^^xsd:string ;
+                    :scientific_name "Camellia_sp"^^xsd:string .
+            
             :local_2565807 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "2565807"^^xsd:int ;
             :parish "São_Domingos_de_Rana"^^xsd:string ;
             :local "Penedo"^^xsd:string ;
             :street_name "Avenida_Infante_Dom_Henrique"^^xsd:string .
+            
+            :Cryptomeria_japonica rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "criptomeria_do_japão"^^xsd:string ;
+                    :scientific_name "Cryptomeria_japonica"^^xsd:string .
             
             :local_2772455 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -13606,6 +14351,11 @@
             :parish "Alcabideche"^^xsd:string ;
             :local "Bicesse"^^xsd:string ;
             :street_name "Rua_de_Celões"^^xsd:string .
+            
+            :Eugenia_myrtifolia rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "eugenia"^^xsd:string ;
+                    :scientific_name "Eugenia_myrtifolia"^^xsd:string .
             
             :local_2711951 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -13754,6 +14504,11 @@
             :local "São_Pedro_do_Estoril"^^xsd:string ;
             :street_name "Rua_da_República"^^xsd:string .
             
+            :Bauhinia_variegata rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "pata_de_vaca_rosada"^^xsd:string ;
+                    :scientific_name "Bauhinia_variegata"^^xsd:string .
+            
             :local_1700955 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1700955"^^xsd:int ;
@@ -13823,6 +14578,11 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "Torre"^^xsd:string ;
             :street_name "Travessa_das_Romãzeiras"^^xsd:string .
+            
+            :Corylius_avellana rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "aveleira"^^xsd:string ;
+                    :scientific_name "Corylius_avellana"^^xsd:string .
             
             :local_2788457 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -13894,6 +14654,11 @@
             :local "São_Domingos_de_Rana"^^xsd:string ;
             :street_name "Praceta_da_Harmonia"^^xsd:string .
             
+            :Erythrina_caffra rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "árvore_de_coral"^^xsd:string ;
+                    :scientific_name "Erythrina_caffra"^^xsd:string .
+            
             :local_1680773 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "1680773"^^xsd:int ;
@@ -13901,12 +14666,37 @@
             :local "São_Domingos_de_Rana"^^xsd:string ;
             :street_name "Rua_da_Fidelidade"^^xsd:string .
             
+            :Tilia_platyphyllos rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "tilia_de_folhas_grandes"^^xsd:string ;
+                    :scientific_name "Tilia_platyphyllos"^^xsd:string .
+            
+            :Rosa_sp\. rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "rosa"^^xsd:string ;
+                    :scientific_name "Rosa_sp\."^^xsd:string .
+            
             :local_2570309 rdf:type owl:NamedIndividual ,
                         :Location ;
             :street_id "2570309"^^xsd:int ;
             :parish "U.F._Carcavelos_e_Parede"^^xsd:string ;
             :local "Jardins_da_Parede"^^xsd:string ;
             :street_name "Avenida_das_Tílias"^^xsd:string .
+            
+            :Rhamnus_alaternus rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "Aderno_bastardo"^^xsd:string ;
+                    :scientific_name "Rhamnus_alaternus"^^xsd:string .
+            
+            :Fraxinus_angustifolia rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "freixo_comum"^^xsd:string ;
+                    :scientific_name "Fraxinus_angustifolia"^^xsd:string .
+            
+            :Plectranthus_barbatus rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "boldo_de_jardim"^^xsd:string ;
+                    :scientific_name "Plectranthus_barbatus"^^xsd:string .
             
             :local_2565511 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -13935,6 +14725,21 @@
             :parish "U.F._Cascais_e_Estoril"^^xsd:string ;
             :local "São_João_do_Estoril"^^xsd:string ;
             :street_name "Rua_dos_Mangericos"^^xsd:string .
+            
+            :Prunus_armeniaca rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "damasqueiro"^^xsd:string ;
+                    :scientific_name "Prunus_armeniaca"^^xsd:string .
+            
+            :Strelitzia_nicolai rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "estrelicia_gigante"^^xsd:string ;
+                    :scientific_name "Strelitzia_nicolai"^^xsd:string .
+            
+            :Ligustrum_lucidum rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "alfenheiro"^^xsd:string ;
+                    :scientific_name "Ligustrum_lucidum"^^xsd:string .
             
             :local_2784996 rdf:type owl:NamedIndividual ,
                         :Location ;
@@ -13998,6 +14803,11 @@
             :parish "São_Domingos_de_Rana"^^xsd:string ;
             :local "Caparide"^^xsd:string ;
             :street_name "Rua_da_Tilia"^^xsd:string .
+            
+            :Acer_monspessulanum rdf:type owl:NamedIndividual ,
+                            :Species ;
+                    :species_name "zelha"^^xsd:string ;
+                    :scientific_name "Acer_monspessulanum"^^xsd:string .
             
             :local_2523066 rdf:type owl:NamedIndividual ,
                         :Location ;
