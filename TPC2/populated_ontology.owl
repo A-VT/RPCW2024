@@ -3416,438 +3416,548 @@
                   :Course ;
          :has_student :A33822, :A35303, :A22670, :A35335, :A38172, :A29004, :A38208, :A33209, :A36476, :A38118, :A27673;
          :teaches :I1 ;
-         :courseId "CB1"^^xsd:string .
+         :courseId "CB1"^^xsd:string ;
+         :designation "Curso Básico de Clarinete"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS23
         :CS23 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A33142, :A33155, :A33157, :A34935, :A38159, :A38192, :AE-939;
          :teaches :I1 ;
-         :courseId "CS23"^^xsd:string .
+         :courseId "CS23"^^xsd:string ;
+         :designation "Curso Supletivo de Clarinete"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB2
         :CB2 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A35278, :A33689, :A35052, :A38595, :A38163, :A39750, :A21008, :A29011, :A38178, :A29048, :A38154, :A35374;
          :teaches :I2 ;
-         :courseId "CB2"^^xsd:string .
+         :courseId "CB2"^^xsd:string ;
+         :designation "Curso Básico de Contrabaixo"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS24
         :CS24 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A35277, :A38207, :A35339, :A15619, :A35357, :A36764;
          :teaches :I2 ;
-         :courseId "CS24"^^xsd:string .
+         :courseId "CS24"^^xsd:string ;
+         :designation "Curso Supletivo de Contrabaixo"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB3
         :CB3 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38143, :A33143, :A35298, :A38123, :A38189, :A23916, :A38205, :A38223, :A23544, :A27645;
          :teaches :I3 ;
-         :courseId "CB3"^^xsd:string .
+         :courseId "CB3"^^xsd:string ;
+         :designation "Curso Básico de Corne Inglês"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS25
         :CS25 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A34640, :A28722, :A30226, :A27658;
          :teaches :I3 ;
-         :courseId "CS25"^^xsd:string .
+         :courseId "CS25"^^xsd:string ;
+         :designation "Curso Supletivo de Corne Inglês"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB4
         :CB4 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38169, :A35323, :A38212, :A30219, :A29282, :A33222, :A38148, :A33229, :A33234, :A38177, :A27648;
          :teaches :I4 ;
-         :courseId "CB4"^^xsd:string .
+         :courseId "CB4"^^xsd:string ;
+         :designation "Curso Básico de Eufónio"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS26
         :CS26 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38128, :A38161, :A28735;
          :teaches :I4 ;
-         :courseId "CS26"^^xsd:string .
+         :courseId "CS26"^^xsd:string ;
+         :designation "Curso Supletivo de Eufónio"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB5
         :CB5 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38165, :A38176, :A35280, :A38210, :A22854, :A32753, :A38199, :A30211, :A38137, :A38150, :A29631, :A39938, :A35366;
          :teaches :I5 ;
-         :courseId "CB5"^^xsd:string .
+         :courseId "CB5"^^xsd:string ;
+         :designation "Curso Básico de Fagote"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS27
         :CS27 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A32648, :A33158, :A33162, :A39508, :A17855, :A24839, :A22695, :A38119, :A38127;
          :teaches :I5 ;
-         :courseId "CS27"^^xsd:string .
+         :courseId "CS27"^^xsd:string ;
+         :designation "Curso Supletivo de Fagote"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB6
         :CB6 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38156, :A35293, :A38185, :A38202, :A38175, :A35349, :A30241, :A35855, :A38144;
          :teaches :I6 ;
-         :courseId "CB6"^^xsd:string .
+         :courseId "CB6"^^xsd:string ;
+         :designation "Curso Básico de Flauta"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS28
         :CS28 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A35271, :A35315, :A35398, :A35337, :A33213, :AE-922;
          :teaches :I6 ;
-         :courseId "CS28"^^xsd:string .
+         :courseId "CS28"^^xsd:string ;
+         :designation "Curso Supletivo de Flauta"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB7
         :CB7 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A33141, :A38204, :A38139, :A39408, :A35364, :A38153, :A35377, :AE-907;
          :teaches :I7 ;
-         :courseId "CB7"^^xsd:string .
+         :courseId "CB7"^^xsd:string ;
+         :designation "Curso Básico de Fliscorne"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS29
         :CS29 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A33140, :A35808, :A38180, :A30201, :A38184;
          :teaches :I7 ;
-         :courseId "CS29"^^xsd:string .
+         :courseId "CS29"^^xsd:string ;
+         :designation "Curso Supletivo de Fliscorne"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB8
         :CB8 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A1510, :A33057, :A33291, :A35285, :A38191, :A38220, :A22688, :A35352, :A38217, :A38908, :A35372;
          :teaches :I8 ;
-         :courseId "CB8"^^xsd:string .
+         :courseId "CB8"^^xsd:string ;
+         :designation "Curso Básico de Guitarra"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS30
         :CS30 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A35284, :A38125, :A38164, :A36757, :A38197, :A39341, :A38168, :A35348, :A39406, :A33196, :A33204, :A38149, :A29254;
          :teaches :I8 ;
-         :courseId "CS30"^^xsd:string .
+         :courseId "CS30"^^xsd:string ;
+         :designation "Curso Supletivo de Guitarra"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB9
         :CB9 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38214, :A20044, :A33272, :A33168, :A38136, :A33420, :A22701, :A38158, :A39944, :A35371, :A29253, :A25868, :A36765, :A24885;
          :teaches :I9 ;
-         :courseId "CB9"^^xsd:string .
+         :courseId "CB9"^^xsd:string ;
+         :designation "Curso Básico de Harpa"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS31
         :CS31 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A27589, :A30187, :A35322, :A35325, :A38206, :A38121, :A34035, :A21432, :A38203, :A34508, :A38130;
          :teaches :I9 ;
-         :courseId "CS31"^^xsd:string .
+         :courseId "CS31"^^xsd:string ;
+         :designation "Curso Supletivo de Harpa"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB10
         :CB10 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A35272, :A35300, :A38187, :A30212, :A32480, :A39509, :A38183, :A33199;
          :teaches :I10 ;
-         :courseId "CB10"^^xsd:string .
+         :courseId "CB10"^^xsd:string ;
+         :designation "Curso Básico de Oboé"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS32
         :CS32 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A32010, :A39503, :A16409, :A33186, :A39747, :A39407, :A30266;
          :teaches :I10 ;
-         :courseId "CS32"^^xsd:string .
+         :courseId "CS32"^^xsd:string ;
+         :designation "Curso Supletivo de Oboé"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB11
         :CB11 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A18141, :A35302, :A36424, :A38194, :A27577, :A35363, :A38151, :A38173;
          :teaches :I11 ;
-         :courseId "CB11"^^xsd:string .
+         :courseId "CB11"^^xsd:string ;
+         :designation "Curso Básico de Orgão"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS33
         :CS33 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A19705, :A36864, :A38120, :A30015, :A38129;
          :teaches :I11 ;
-         :courseId "CS33"^^xsd:string .
+         :courseId "CS33"^^xsd:string ;
+         :designation "Curso Supletivo de Orgão"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB12
         :CB12 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38224, :A30214, :A38155, :A25383, :A39410;
          :teaches :I12 ;
-         :courseId "CB12"^^xsd:string .
+         :courseId "CB12"^^xsd:string ;
+         :designation "Curso Básico de Percussão"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS34
         :CS34 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38211, :A38174, :A22662, :A35832, :A33709, :A22685, :A38195, :A38145;
          :teaches :I12 ;
-         :courseId "CS34"^^xsd:string .
+         :courseId "CS34"^^xsd:string ;
+         :designation "Curso Supletivo de Percussão"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB13
         :CB13 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A35283, :A33858, :A35332, :A38221, :A38216, :A39671;
          :teaches :I13 ;
-         :courseId "CB13"^^xsd:string .
+         :courseId "CB13"^^xsd:string ;
+         :designation "Curso Básico de Piano"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS35
         :CS35 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38218, :A33165, :A35312, :A18938, :A35330, :A34434, :A33524, :A38181;
          :teaches :I13 ;
-         :courseId "CS35"^^xsd:string .
+         :courseId "CS35"^^xsd:string ;
+         :designation "Curso Supletivo de Piano"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB14
         :CB14 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38196, :A29871, :A38198, :A36761, :A33280, :A33235, :A4140;
          :teaches :I14 ;
-         :courseId "CB14"^^xsd:string .
+         :courseId "CB14"^^xsd:string ;
+         :designation "Curso Básico de Saxofone"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS36
         :CS36 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A24654, :A35318, :A38140, :A35342, :A18770;
          :teaches :I14 ;
-         :courseId "CS36"^^xsd:string .
+         :courseId "CS36"^^xsd:string ;
+         :designation "Curso Supletivo de Saxofone"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB15
         :CB15 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A33148, :A35291, :A27608, :A35316, :A38133, :A30209, :A23508, :A36454, :A30243;
          :teaches :I15 ;
-         :courseId "CB15"^^xsd:string .
+         :courseId "CB15"^^xsd:string ;
+         :designation "Curso Básico de Trombone"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS37
         :CS37 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38190, :A39288, :A33188, :A38179, :A32652;
          :teaches :I15 ;
-         :courseId "CS37"^^xsd:string .
+         :courseId "CS37"^^xsd:string ;
+         :designation "Curso Supletivo de Trombone"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB16
         :CB16 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38215, :A30213, :A33650, :A38254, :A12753, :A35355, :A14539, :A33228, :A24876, :A35378;
          :teaches :I16 ;
-         :courseId "CB16"^^xsd:string .
+         :courseId "CB16"^^xsd:string ;
+         :designation "Curso Básico de Trompa"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS38
         :CS38 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38126, :A26737, :A38152, :A33195, :A38116;
          :teaches :I16 ;
-         :courseId "CS38"^^xsd:string .
+         :courseId "CS38"^^xsd:string ;
+         :designation "Curso Supletivo de Trompa"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB17
         :CB17 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38193, :A36487, :A30166, :A36960, :A24784, :A35144, :A33282;
          :teaches :I17 ;
-         :courseId "CB17"^^xsd:string .
+         :courseId "CB17"^^xsd:string ;
+         :designation "Curso Básico de Trompete"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS39
         :CS39 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38134, :A38170, :A38222, :A38209, :A36969, :A38160;
          :teaches :I17 ;
-         :courseId "CS39"^^xsd:string .
+         :courseId "CS39"^^xsd:string ;
+         :designation "Curso Supletivo de Trompete"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB18
         :CB18 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A30176, :A39506, :A27637, :A34435, :A38146;
          :teaches :I18 ;
-         :courseId "CB18"^^xsd:string .
+         :courseId "CB18"^^xsd:string ;
+         :designation "Curso Básico de Tuba"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS40
         :CS40 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A33146, :A35440, :A33182, :A38219, :A33238;
          :teaches :I18 ;
-         :courseId "CS40"^^xsd:string .
+         :courseId "CS40"^^xsd:string ;
+         :designation "Curso Supletivo de Tuba"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB19
         :CB19 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A20021, :A38166, :A35465, :A35320, :A35328, :A35333, :A35334, :A32608, :A33127, :A38147, :A38141;
          :teaches :I19 ;
-         :courseId "CB19"^^xsd:string .
+         :courseId "CB19"^^xsd:string ;
+         :designation "Curso Básico de Violoncelo"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS41
         :CS41 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A32597, :A25073, :A38117, :A30305, :A35319, :A39622, :A35843, :A38122, :A24875, :A39343;
          :teaches :I19 ;
-         :courseId "CS41"^^xsd:string .
+         :courseId "CS41"^^xsd:string ;
+         :designation "Curso Supletivo de Violoncelo"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB20
         :CB20 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A36422, :A33152, :A35294, :A35395, :A35360, :A33082, :A19550, :A30254, :A38135;
          :teaches :I20 ;
-         :courseId "CB20"^^xsd:string .
+         :courseId "CB20"^^xsd:string ;
+         :designation "Curso Básico de Violino"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS42
         :CS42 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A33173, :A33176, :A36425, :A38200, :A35375;
          :teaches :I20 ;
-         :courseId "CS42"^^xsd:string .
+         :courseId "CS42"^^xsd:string ;
+         :designation "Curso Supletivo de Violino"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB21
         :CB21 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A33145, :A35308, :A27616, :A35321, :A33172, :A38142, :A35340, :A33727, :A21711, :A33214, :A35376, :A33240, :A27620;
          :teaches :I21 ;
-         :courseId "CB21"^^xsd:string .
+         :courseId "CB21"^^xsd:string ;
+         :designation "Curso Básico de Viola de Arco"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS43
         :CS43 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A36539, :A35274, :A38132, :A33163, :A36758, :A38157, :A20464, :A30238, :A38131;
          :teaches :I21 ;
-         :courseId "CS43"^^xsd:string .
+         :courseId "CS43"^^xsd:string ;
+         :designation "Curso Supletivo de Viola de Arco"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CB22
         :CB22 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38138, :A36971, :A38124, :A36445, :A26208, :A33703, :A33175, :A35350, :A39342, :A33437, :A33281, :A37029, :A35418, :A38182;
          :teaches :I22 ;
-         :courseId "CB22"^^xsd:string .
+         :courseId "CB22"^^xsd:string ;
+         :designation "Curso Básico de Bandolim"^^xsd:string ;
+         :duration "5"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#CS44
         :CS44 rdf:type owl:NamedIndividual ,
                   :Course ;
          :has_student :A38167, :A35443, :A35311, :A38186, :A35331, :A27629, :A38171, :A22721, :A36773;
          :teaches :I22 ;
-         :courseId "CS44"^^xsd:string .
+         :courseId "CS44"^^xsd:string ;
+         :designation "Curso Supletivo de Bandolim"^^xsd:string ;
+         :duration "3"^^xsd:int .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I1
         :I1 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB1, :CS23;
-             :instrumentId "I1" .
+             :instrumentId "I1";
+             :text "Clarinete" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I2
         :I2 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB2, :CS24;
-             :instrumentId "I2" .
+             :instrumentId "I2";
+             :text "Contrabaixo" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I3
         :I3 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB3, :CS25;
-             :instrumentId "I3" .
+             :instrumentId "I3";
+             :text "Corne Inglês" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I4
         :I4 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB4, :CS26;
-             :instrumentId "I4" .
+             :instrumentId "I4";
+             :text "Eufónio" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I5
         :I5 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB5, :CS27;
-             :instrumentId "I5" .
+             :instrumentId "I5";
+             :text "Fagote" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I6
         :I6 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB6, :CS28;
-             :instrumentId "I6" .
+             :instrumentId "I6";
+             :text "Flauta" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I7
         :I7 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB7, :CS29;
-             :instrumentId "I7" .
+             :instrumentId "I7";
+             :text "Fliscorne" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I8
         :I8 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB8, :CS30;
-             :instrumentId "I8" .
+             :instrumentId "I8";
+             :text "Guitarra" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I9
         :I9 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB9, :CS31;
-             :instrumentId "I9" .
+             :instrumentId "I9";
+             :text "Harpa" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I10
         :I10 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB10, :CS32;
-             :instrumentId "I10" .
+             :instrumentId "I10";
+             :text "Oboé" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I11
         :I11 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB11, :CS33;
-             :instrumentId "I11" .
+             :instrumentId "I11";
+             :text "Orgão" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I12
         :I12 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB12, :CS34;
-             :instrumentId "I12" .
+             :instrumentId "I12";
+             :text "Percussão" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I13
         :I13 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB13, :CS35;
-             :instrumentId "I13" .
+             :instrumentId "I13";
+             :text "Piano" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I14
         :I14 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB14, :CS36;
-             :instrumentId "I14" .
+             :instrumentId "I14";
+             :text "Saxofone" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I15
         :I15 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB15, :CS37;
-             :instrumentId "I15" .
+             :instrumentId "I15";
+             :text "Trombone" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I16
         :I16 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB16, :CS38;
-             :instrumentId "I16" .
+             :instrumentId "I16";
+             :text "Trompa" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I17
         :I17 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB17, :CS39;
-             :instrumentId "I17" .
+             :instrumentId "I17";
+             :text "Trompete" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I18
         :I18 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB18, :CS40;
-             :instrumentId "I18" .
+             :instrumentId "I18";
+             :text "Tuba" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I19
         :I19 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB19, :CS41;
-             :instrumentId "I19" .
+             :instrumentId "I19";
+             :text "Violoncelo" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I20
         :I20 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB20, :CS42;
-             :instrumentId "I20" .
+             :instrumentId "I20";
+             :text "Violino" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I21
         :I21 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB21, :CS43;
-             :instrumentId "I21" .
+             :instrumentId "I21";
+             :text "Viola de Arco" .
         
         ###  http://rpcw.di.uminho.pt/2024/music_school#I22
         :I22 rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in :CB22, :CS44;
-             :instrumentId "I22" .
+             :instrumentId "I22";
+             :text "Bandolim" .
         

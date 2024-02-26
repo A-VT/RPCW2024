@@ -66,7 +66,9 @@ def main():
                   :Course ;
          :has_student {str_courses};
          :teaches :{c['instrumento']['id']} ;
-         :courseId "{c['id']}"^^xsd:string .
+         :courseId "{c['id']}"^^xsd:string ;
+         :designation "{c['designacao']}"^^xsd:string ;
+         :duration "{c['duracao']}"^^xsd:int .
         """
         ttl += line_instrument
 
@@ -82,7 +84,8 @@ def main():
         :{i['id']} rdf:type owl:NamedIndividual ,
                       :Instrument ;
              :taught_in {str_courses};
-             :instrumentId "{i['id']}" .
+             :instrumentId "{i['id']}";
+             :text "{i['#text']}" .
         """
         ttl += line_instrument
 
