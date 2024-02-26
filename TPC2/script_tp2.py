@@ -35,7 +35,7 @@ def main():
           :studentId "{s['id']}" ;
           :name "{s['nome']}"^^xsd:string;
           :courseYear "{s['anoCurso']}"^^xsd:int ;
-          :dateBirth "{s['dataNasc']}"^^xsd:dateTime;
+          :dateBirth "{s['dataNasc']}"^^xsd:dateTime.
         """
         ttl += line_instrument
     
@@ -43,41 +43,50 @@ def main():
     inverted_dict = defaultdict(list)
     for key, value in dic_al_c.items():
         inverted_dict[value].append(key)
-    print(inverted_dict)
 
-    str_courses = ":has_student : ;"
-    
+    #dic_instruments = {instrument['#text']: instrument['id'] for instrument in instruments}
+    #print(dic_instruments)
+        
+    dic_ins_c = {}
     for c in courses:
         str_courses = ""
         students = inverted_dict[c['id']]
         for s in students:
-            str_courses += f":has_student : {s} ;\n\t\t"
+            str_courses += f":{s}, "
+        str_courses = str_courses[:-2]
+        
+        if c['instrumento']['id'] not in dic_ins_c:
+            dic_ins_c[c['instrumento']['id']] = [c['id']]
+        else:
+            dic_ins_c[c['instrumento']['id']].append(c['id'])
+
         line_instrument =f"""
         ###  http://rpcw.di.uminho.pt/2024/music_school#{c['id']}
         :{c['id']} rdf:type owl:NamedIndividual ,
                   :Course ;
-         {str_courses}
-         :teaches : {c['instrumento']['id']};
+         :has_student {str_courses};
+         :teaches :{c['instrumento']['id']} ;
          :courseId "{c['id']}"^^xsd:string .
         """
         ttl += line_instrument
 
+    print(f"dic_ins_c: {dic_ins_c}")
+    for i in instruments:
+        str_courses = ""
+        vals = dic_ins_c[i['id']]
+        for val in vals:
+            str_courses += f":{val}, "
+        str_courses = str_courses[:-2]
 
+        line_instrument =f"""
+        ###  http://rpcw.di.uminho.pt/2024/music_school#{i['id']}
+        :{i['id']} rdf:type owl:NamedIndividual ,
+                      :Instrument ;
+             :taught_in {str_courses};
+             :instrumentId "{i['id']}" .
+        """
+        ttl += line_instrument
 
-##    str_instruments = ":taught_in : ;"
-##
-##    for i in instruments:
-##        print(i)
-##        line_instrument =f"""
-##        ###  http://rpcw.di.uminho.pt/2024/music_school#{i['#text']}
-##        :{i['#text']} rdf:type owl:NamedIndividual ,
-##                      :Instrument ;
-##             {str_instruments}
-##             :instrumentId "{i['id']}" ;
-##             :text "{i['#text']}" .
-##        """
-##        ttl += line_instrument
-##
     out_f.write(ttl)
 
 if __name__ == "__main__":
