@@ -1,0 +1,367 @@
+@prefix : <http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2> .
+
+<http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#hasBase
+:hasBase rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasIngredient ;
+         owl:inverseOf :isBaseOf ;
+         rdfs:domain :Pizza ;
+         rdfs:range :PizzaBase .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#hasIngredient
+:hasIngredient rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isIngredientOf .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#hasTopping
+:hasTopping rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasIngredient ;
+            owl:inverseOf :isToppingOf ;
+            rdfs:domain :Pizza ;
+            rdfs:range :PizzaTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#isBaseOf
+:isBaseOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :isIngredientOf ;
+          rdfs:domain :PizzaBase ;
+          rdfs:range :Pizza .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#isIngredientOf
+:isIngredientOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#isToppingOf
+:isToppingOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :isIngredientOf ;
+             rdfs:domain :PizzaTopping ;
+             rdfs:range :Pizza .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#AmericanaHotPizza
+:AmericanaHotPizza rdf:type owl:Class ;
+                   rdfs:subClassOf :NamedPizza ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTopping ;
+                                     owl:someValuesFrom :JalapenoPepperTopping
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTopping ;
+                                     owl:someValuesFrom :MozzarellaTopping
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTopping ;
+                                     owl:someValuesFrom :PepperoniTopping
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTopping ;
+                                     owl:someValuesFrom :TomatoTopping
+                                   ] ;
+                   rdfs:comment "A pizza that only has Mozzarella, Tomato, and Pepperoni toppings" .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#AmericanaPizza
+:AmericanaPizza rdf:type owl:Class ;
+                rdfs:subClassOf :NamedPizza ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTopping ;
+                                  owl:someValuesFrom :MozzarellaTopping
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTopping ;
+                                  owl:someValuesFrom :PepperoniTopping
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTopping ;
+                                  owl:someValuesFrom :TomatoTopping
+                                ] ;
+                rdfs:comment "A pizza that only has Mozzarella, Tomato, and Pepperoni toppings" .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#AnchovyTopping
+:AnchovyTopping rdf:type owl:Class ;
+                rdfs:subClassOf :SeafoodTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#CaperTopping
+:CaperTopping rdf:type owl:Class ;
+              rdfs:subClassOf :VegetableTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#CheeseTopping
+:CheeseTopping rdf:type owl:Class ;
+               rdfs:subClassOf :PizzaTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#CheesyPizza
+:CheesyPizza rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasTopping ;
+                                                          owl:someValuesFrom :CheeseTopping
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#DeepPanBase
+:DeepPanBase rdf:type owl:Class ;
+             rdfs:subClassOf :PizzaBase ;
+             owl:disjointWith :ThinAndCrispyBase .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#GreenPepperTopping
+:GreenPepperTopping rdf:type owl:Class ;
+                    rdfs:subClassOf :PepperTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#HamTopping
+:HamTopping rdf:type owl:Class ;
+            rdfs:subClassOf :MeatTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#JalapenoPepperTopping
+:JalapenoPepperTopping rdf:type owl:Class ;
+                       rdfs:subClassOf :PepperTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#MargheritaPizza
+:MargheritaPizza rdf:type owl:Class ;
+                 rdfs:subClassOf :NamedPizza ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTopping ;
+                                   owl:someValuesFrom :MozzarellaTopping
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTopping ;
+                                   owl:someValuesFrom :TomatoTopping
+                                 ] ;
+                 owl:disjointWith :PizzaBase ,
+                                  :PizzaTopping ;
+                 rdfs:comment "A pizza that only has Mozzarella and Tomato toppings." .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#MeatTopping
+:MeatTopping rdf:type owl:Class ;
+             rdfs:subClassOf :PizzaTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#MozzarellaTopping
+:MozzarellaTopping rdf:type owl:Class ;
+                   rdfs:subClassOf :CheeseTopping ;
+                   owl:disjointWith :ParmesanTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#MushroomTopping
+:MushroomTopping rdf:type owl:Class ;
+                 rdfs:subClassOf :VegetableTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#NamedPizza
+:NamedPizza rdf:type owl:Class ;
+            rdfs:subClassOf :Pizza .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#OliveTopping
+:OliveTopping rdf:type owl:Class ;
+              rdfs:subClassOf :VegetableTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#ParmesanTopping
+:ParmesanTopping rdf:type owl:Class ;
+                 rdfs:subClassOf :CheeseTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#PepperTopping
+:PepperTopping rdf:type owl:Class ;
+               rdfs:subClassOf :VegetableTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#PepperoniTopping
+:PepperoniTopping rdf:type owl:Class ;
+                  rdfs:subClassOf :MeatTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#Pizza
+:Pizza rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasBase ;
+                         owl:someValuesFrom :PizzaBase
+                       ] .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#PizzaBase
+:PizzaBase rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#PizzaTopping
+:PizzaTopping rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#PrawnTopping
+:PrawnTopping rdf:type owl:Class ;
+              rdfs:subClassOf :SeafoodTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#RedPepperTopping
+:RedPepperTopping rdf:type owl:Class ;
+                  rdfs:subClassOf :PepperTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#SalamiTopping
+:SalamiTopping rdf:type owl:Class ;
+               rdfs:subClassOf :MeatTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#SeafoodTopping
+:SeafoodTopping rdf:type owl:Class ;
+                rdfs:subClassOf :PizzaTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#SohoPizza
+:SohoPizza rdf:type owl:Class ;
+           rdfs:subClassOf :NamedPizza ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTopping ;
+                             owl:someValuesFrom :MozzarellaTopping
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTopping ;
+                             owl:someValuesFrom :OliveTopping
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTopping ;
+                             owl:someValuesFrom :ParmesanTopping
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTopping ;
+                             owl:someValuesFrom :TomatoTopping
+                           ] ;
+           rdfs:comment "A pizza that only has Mozzarella and Tomato toppings." .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#SpicyBeefTopping
+:SpicyBeefTopping rdf:type owl:Class ;
+                  rdfs:subClassOf :MeatTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#ThinAndCrispyBase
+:ThinAndCrispyBase rdf:type owl:Class ;
+                   rdfs:subClassOf :PizzaBase .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#TomatoTopping
+:TomatoTopping rdf:type owl:Class ;
+               rdfs:subClassOf :VegetableTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#TunaTopping
+:TunaTopping rdf:type owl:Class ;
+             rdfs:subClassOf :SeafoodTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#VegetableTopping
+:VegetableTopping rdf:type owl:Class ;
+                  rdfs:subClassOf :PizzaTopping .
+
+
+###  http://www.semanticweb.org/avt/ontologies/2024/1/pizza_2#VegetarianPizza
+:VegetarianPizza rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasTopping ;
+                                                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                  owl:unionOf ( :CheeseTopping
+                                                                                                :VegetableTopping
+                                                                                              )
+                                                                                ]
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AmericanaHotPizza
+                :AmericanaPizza
+                :MargheritaPizza
+                :SohoPizza
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AnchovyTopping
+                :PrawnTopping
+                :TunaTopping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CaperTopping
+                :MushroomTopping
+                :OliveTopping
+                :PepperTopping
+                :TomatoTopping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CheeseTopping
+                :MeatTopping
+                :SeafoodTopping
+                :VegetableTopping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :GreenPepperTopping
+                :JalapenoPepperTopping
+                :RedPepperTopping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :HamTopping
+                :PepperoniTopping
+                :SalamiTopping
+                :SpicyBeefTopping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Pizza
+                :PizzaBase
+                :PizzaTopping
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
