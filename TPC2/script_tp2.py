@@ -70,7 +70,6 @@ def main():
         """
         ttl += line_instrument
 
-    print(f"dic_ins_c: {dic_ins_c}")
     for i in instruments:
         str_courses = ""
         vals = dic_ins_c[i['id']]
