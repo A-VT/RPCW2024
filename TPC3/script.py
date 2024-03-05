@@ -29,8 +29,9 @@ def main():
             dicDe[De].append(f"lig{index}")
 
         
-###  http://rpcw.di.uminho.pt/2024/mapa-virtual#lig{index}
+
         line = f"""
+###  http://rpcw.di.uminho.pt/2024/mapa-virtual#lig{index}
 :lig{index} rdf:type owl:NamedIndividual ,
                :Ligacao ;
       :idLigacao "lig{index}"^^xsd:string ;
@@ -62,8 +63,8 @@ def main():
         
         cid = cit["id"]
 
-###  http://rpcw.di.uminho.pt/2024/mapa-virtual#{cid}
         line = f"""
+###  http://rpcw.di.uminho.pt/2024/mapa-virtual#{cid}
 :{cid} rdf:type owl:NamedIndividual ,
                :Cidade ;
       {strOr}
