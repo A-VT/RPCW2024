@@ -30,10 +30,10 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX mapa: <http://rpcw.di.uminho.pt/2024/mapa-virtual#>
 
-SELECT *
+SELECT (COUNT(?cidade) AS ?nCidades)
 WHERE {
-  ?city mapa:distrito "Porto".
-  ?city mapa:tem_origem ?link.
+  ?cidade mapa:distrito "Porto".
+  ?cidade mapa:tem_origem ?link.
 }
 ```
 
