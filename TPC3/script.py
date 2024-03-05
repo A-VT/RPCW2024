@@ -33,7 +33,7 @@ def main():
         line = f"""
 :lig{index} rdf:type owl:NamedIndividual ,
                :Ligacao ;
-      :idLigacao "lig{index}"^^xsd:string .
+      :idLigacao "lig{index}"^^xsd:string ;
       :distancia "{con["distância"]}"^^xsd:float.
         """
         ttl += line
@@ -52,19 +52,13 @@ def main():
 
         if str in dicOr:
             temOrig = dicOr[str]
-            strOr = ":tem_origem "
             for o in temOrig:
-                strOr+= f"{o} ,"
-            strOr = strOr[:-1]
-            strOr += ";"
+                strOr += f":tem_origem :{o};\n\t"
 
         if str in dicDe:
             temDest = dicDe[str]
-            strDe = ":tem_destino "
             for o in temDest:
-                strDe+= f"{o} ,"
-            strDe = strDe[:-1]
-            strDe += ";"
+                strDe+= f":tem_destino :{o};\n\t"
         
         cid = cit["id"]
 
