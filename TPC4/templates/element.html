@@ -22,12 +22,14 @@
                     <th>Nome</th>
                     <th>Símbolo</th>
                     <th>Grupo</th>
+                    <th>Nome do Grupo</th>
                 </tr>
                 <tr>
                     <td>{{ data.na }}</td>
                     <td>{{ data.nome }}</td>
                     <td>{{ data.simb }}</td>
-                    <td><a href="/group/"+data.class>{{ data.gname }} </a> </td>
+                    <td><a href="/groups">{{ data.gnumber}}</a></td>
+                    <td><a href="/group/"+data.gnumber>{{ data.gname }} </a> </td>
                 </tr>
                 
             </table>
