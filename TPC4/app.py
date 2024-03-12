@@ -85,7 +85,9 @@ def groups():
 select ?gnumber ?nome where { 
 	?s a tp:Group .
     ?s tp:number ?gnumber.
-    optional{?s tp:name ?nome.}   
+    optional{
+        ?s tp:name ?nome.
+    }   
 } order by ?gnumber
 """
 
@@ -101,40 +103,44 @@ select ?gnumber ?nome where {
         return render_template('empty.html', data=data)
 
 
-
-'''
 @app.route('/group/<int:gnumber>')
-def element(gnumber):
+def group(gnumber):
+
     sparql_query = f"""
-    prefix tp: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
-    select ?na ?nome ?simb ?gname ?gnumber where {{
-        ?s a :Group .
-        optional{{
-            ?s tp:number {gnumber}.
-        }}
-        optional{{
-            ?s tp:name ?nome.
-        }}
-    }} order by ?na
-    
+prefix tp: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select * where {{ 
+	?g a tp:Group .
+    ?g tp:number {gnumber}.
+    optional{{
+        ?g tp:name ?nomeGroup.
+    }}
+    ?g tp:element ?elems.
+    ?elems tp:name ?nomeElems.
+    ?elems tp:symbol ?simb.
+    ?elems tp:atomicNumber ?na. 
+}}
 """
+    
     payload = {"query": sparql_query}
     response = requests.get(graphdb_endpoint, params=payload,
         headers = {'Accept': 'application/sparql-results+json'}
     )
+
     if response.status_code == 200:
         data = response.json()["results"]["bindings"]
+        nomeGroup = ""
+        if "nomeGroup" in data[0]:
+            nomeGroup = f', {data[0]["nomeGroup"]["value"]}'
+        
+        
         return render_template('group.html', data = {
             "data": data_iso_formatada,
-            "na": data[0]["gnumber"]["value"],
-            "nome": data[0]["nome"]["value"]
+            "gnumber": gnumber,
+            "elems": data,
+            "nomeGroup": nomeGroup
         })
     else:
         return render_template('empty.html', data=data)
-'''
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
