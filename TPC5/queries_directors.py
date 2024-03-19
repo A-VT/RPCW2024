@@ -1,55 +1,57 @@
 import requests
 import json
 import sys
-
+from queries_films import empty_file
 
 headers = {"Accept": "application/sparql-results+json"}
 sparql_endpoint = "http://dbpedia.org/sparql"
 
-
 def create_directorsjson():
-    in_file = open("./TPC5/filmjsons/films.json", "r")
+    in_file = open("./TPC5/filmjsons/films.json", "r", encoding='utf-8')
     data = json.load(in_file)
+
+    file_path = "./TPC5/filmjsons/directors.json"
+    empty_file(file_path)
 
     for film in data:
         filmiri = film["iri"]
+        print(filmiri)
 
-        #SPARQL query
+        ##SPARQL query
         sparql_query_directors = f"""
         PREFIX dbo: <http://dbpedia.org/ontology/>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-        SELECT *
+            SELECT ?personiri ?person_iri
         WHERE {{
-        #?film dbo:Film <{filmiri}>.
-        <{filmiri}> dbp:name ?filmName.
+        optional {{<{filmiri}> dbo:director ?personiri.}}
+        optional {{<{filmiri}> dbp:director ?person_iri.}}
         }}
         """
-
-        #Define parameters
+        # Define the parameters
         params = {
             "query": sparql_query_directors,
             "format": "json"
         }
-
-        # Send the SPARQL query using requests
-        response2 = requests.get(sparql_query_directors, params=params, headers=headers)
-        if response2.status_code == 200:
+            
+        response = requests.get(sparql_endpoint, params=params, headers=headers)
+        if response.status_code == 200:
             directors = []
-
-            results = response2.json()
+            results = response.json()
             for result in results["results"]["bindings"]:
-                athlete_nome = result["name"]["value"]
-
-                directors.append({
-                "iri":filmiri,
-                "nome":athlete_nome
-                })
-
-            out_file = open("./TPC5/filmjsons/directors.json", "w") 
-            json.dump(directors, out_file, ensure_ascii=False)
-            out_file.close()
+                person_iri = result.get("personiri", {}).get("value")
+                if person_iri is None:
+                    person_iri = result.get("person_iri", {}).get("value")
+                if person_iri:
+                    directors.append({
+                        "iri": filmiri,
+                        "person_iri": person_iri
+                    })
         else:
-            print("Error:", response2.status_code)
-            print(response2.text)
+            print("Error:", response.status_code)
+            print(response.text)
+    
 
+    out_file = open(file_path, "w") 
+    json.dump(directors, out_file, ensure_ascii=True)
+    out_file.close()
+    print("Should've written to file")

@@ -24,6 +24,20 @@ select distinct ?film ?dir where {
 
 ## Main Actors on a specified movie
 
+
+
 ## Secundary Actors on a specified movie
 
-##
+
+
+## Directos on a specified movie
+```
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT *
+WHERE {{
+#?film dbo:Film <{filmiri}>.
+<{filmiri}> dbp:name ?filmName.
+}}
+```

@@ -21,7 +21,7 @@ def create_filmsjson():
     empty_file(file_path)
 
     i = 0
-    while i < 60:
+    while i < 10:
         
         sparql_query_films = f"""
         PREFIX dbo: <http://dbpedia.org/ontology/>
@@ -33,11 +33,18 @@ def create_filmsjson():
         ?film a dbo:Film.
         ?film dbp:name ?filmName.
         ?film dbo:abstract ?filmAbstract.
+
+        ?film dbo:director ?dir.
+        ?film dbo:producer ?prod.
+        ?film dbo:musicComposer ?mu.
+        ?film dbo:starring ?st.
+
         ?film rdfs:label ?label.
-        FILTER(lang(?label)="en").
+        FILTER(langMatches(lang(?filmAbstract), "en") && langMatches(lang(?label), "en")).
         }}
+        GROUP BY ?film
         OFFSET {i*10000}
-        LIMIT {(i+1)*10000}
+        LIMIT {10000}
         """
 
         # Define the parameters
@@ -54,28 +61,47 @@ def create_filmsjson():
             results = response.json()
             
             # Print the results
-            desport = []
+            filmsss = []
             for result in results["results"]["bindings"]:
-                print(result)
-                film_IRI = result["film"]["value"]
-                film_name = result["filmName"]["value"]
-                film_abstract = result["filmAbstract"]["value"]
+                if result != []:
+                    film_IRI = result["film"]["value"]
+                    film_name = result["filmName"]["value"]
+                    film_abstract = result["filmAbstract"]["value"]
 
-                desport.append({
-                    "iri":film_IRI,
-                    "nome": film_name,
-                    "abstract": film_abstract,
-                })
+                    dir_iri = result.get("dir", {}).get("value")
+                    #if dir_iri is None:
+                    #    dir_iri = result.get("director", {}).get("value")
 
-            #append to outfile
-            out_file = open(file_path, "a") 
-            json.dump(desport, out_file, ensure_ascii=False)
-            out_file.close()
+                    prod_iri = result.get("prod", {}).get("value")
+                    #if prod_iri is None:
+                    #    prod_iri = result.get("producer", {}).get("value")
+
+                    mus_iri = result.get("mu", {}).get("value")
+                    #if mus_iri is None:
+                    #    mus_iri = result.get("musicComp", {}).get("value")
+
+                    st_iri = result.get("st", {}).get("value")
+                    #if st_iri is None:
+                    #    st_iri = result.get("starring", {}).get("value")
+
+                    filmsss.append({
+                        "iri":film_IRI,
+                        "nome": film_name,
+                        "abstract": film_abstract,
+                        "director":dir_iri,
+                        "producer":prod_iri,
+                        "music_composer": mus_iri,
+                        "starring": st_iri,
+                    })
 
         else:
             print("Error:", response.status_code)
             print(response.text)
 
         i+=1
-    
+
+    out_file = open(file_path, "w") 
+    json.dump(filmsss, out_file, ensure_ascii=True)
+    out_file.close()
+
     print("\n\nDONE: FILMS.JSON\n\n")
