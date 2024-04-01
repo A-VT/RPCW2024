@@ -3,10 +3,14 @@ import json
 import os
 import concurrent.futures
 import random
+import re
 import time
 
 headers = {"Accept": "application/sparql-results+json"}
 sparql_endpoint = "http://dbpedia.org/sparql"
+
+data = []
+
 
 def empty_file(file_path):
     if os.path.exists(file_path):
@@ -16,16 +20,195 @@ def empty_file(file_path):
     else:
         print(f"File {file_path} does not exist.")
 
+def translate_unicode(text):
+    return re.sub(r'\\u([0-9a-fA-F]{4})', lambda m: chr(int(m.group(1), 16)), text)
+
+def query_actors(movie_iri):
+
+    rel = ["dbo:starring", "dbp:starring"]
+    i = 0
+    
+    success = False
+    while not success:
+        sparql_query = f"""
+            SELECT DISTINCT ?actor ?actorName ?abstract WHERE {{
+                <{movie_iri}> {rel[i]} ?actor .
+                optional {{?actor rdfs:label ?actorName .
+                        filter(lang(?actorName)='en') . }}
+                optional {{?actor dbo:abstract ?abstract .
+                        filter(lang(?abstract)='en') . }}
+            }}
+        """
+        params = {
+            "query": sparql_query,
+            "format": "json"
+        }
+
+        response_ = requests.get(sparql_endpoint, params=params, headers=headers)
+
+        if response_.status_code == 200:
+            results_ = response_.json()
+            print("Results Actors:", results_)  # Print the entire results_actors dictionary for debugging
+
+            actors = []
+
+            if "results" in results_ and "bindings" in results_["results"] and results_["results"]["bindings"]:
+                for result in results_["results"]["bindings"]:
+                    actor = {}
+                    actor['iri'] = translate_unicode(result.get('actor', {}).get('value', ''))
+                    actor['name'] = translate_unicode(result.get('actorName', {}).get('value', ''))
+                    actor['abstract'] = translate_unicode(result.get('abstract', {}).get('value', ''))
+                    actors.append(actor)
+                    success = True
+            else:
+                print("Error:", response_.status_code)
+                print(response_.text)
+                
+        return actors
+
+def query_music_composer(movie_iri):
+
+    rel = ["dbo:musicComposer", "dbp:musicComposer"]
+    i = 0
+    
+    success = False
+    while not success:
+        sparql_query = f"""
+            SELECT DISTINCT ?musicComposer ?musicComposerName ?abstract WHERE {{
+                <{movie_iri}> {rel[i]} ?musicComposer .
+                optional {{?musicComposer rdfs:label ?musicComposerName .
+                        filter(lang(?musicComposerName)='en') . }}
+                optional {{?musicComposer dbo:abstract ?abstract .
+                        filter(lang(?abstract)='en') . }}
+            }}
+        """
+        params = {
+            "query": sparql_query,
+            "format": "json"
+        }
+
+        response_ = requests.get(sparql_endpoint, params=params, headers=headers)
+
+        if response_.status_code == 200:
+            results_ = response_.json()
+            print("Results Actors:", results_)  # Print the entire results_actors dictionary for debugging
+
+            composers = []
+
+            if "results" in results_ and "bindings" in results_["results"] and results_["results"]["bindings"]:
+                for result in results_["results"]["bindings"]:
+                    composer = {}
+                    
+                    composer['iri'] = translate_unicode(result.get('musicComposer', {}).get('value', ''))
+                    composer['name'] = translate_unicode(result.get('musicComposerName', {}).get('value', ''))
+                    composer['abstract'] = translate_unicode(result.get('abstract', {}).get('value', ''))
+                    composers.append(composer)
+                    success = True
+            else:
+                print("Error:", response_.status_code)
+                print(response_.text)
+                
+        return composers
+
+
+def query_producer(movie_iri):
+
+    rel = ["dbo:producer", "dbp:producer"]
+    i = 0
+    
+    success = False
+    while not success:
+        sparql_query = f"""
+            SELECT DISTINCT ?producer ?producerName ?abstract WHERE {{
+                <{movie_iri}> {rel[i]} ?producer .
+                optional {{?producer rdfs:label ?producerName .
+                        filter(lang(?producerName)='en') . }}
+                optional {{?producer dbo:abstract ?abstract .
+                        filter(lang(?abstract)='en') . }}
+            }}
+        """
+        params = {
+            "query": sparql_query,
+            "format": "json"
+        }
+
+        response_ = requests.get(sparql_endpoint, params=params, headers=headers)
+
+        if response_.status_code == 200:
+            results_ = response_.json()
+            print("Results Actors:", results_)  # Print the entire results_actors dictionary for debugging
+
+            producers = []
+
+            if "results" in results_ and "bindings" in results_["results"] and results_["results"]["bindings"]:
+                for result in results_["results"]["bindings"]:
+                    producer = {}
+                    producer['iri'] = translate_unicode(result.get('producer', {}).get('value', ''))
+                    producer['name'] = translate_unicode(result.get('producerName', {}).get('value', ''))
+                    producer['abstract'] = translate_unicode(result.get('abstract', {}).get('value', ''))
+                    producers.append(producer)
+                    success = True
+            else:
+                print("Error:", response_.status_code)
+                print(response_.text)
+                
+        return producers
+
+
+
+def query_director(movie_iri):
+
+    rel = ["dbo:director", "dbp:director"]
+    i = 0
+    
+    success = False
+    while not success:
+        sparql_query = f"""
+            SELECT DISTINCT ?director ?directorName ?abstract WHERE {{
+                <{movie_iri}> {rel[i]} ?director .
+                optional {{?director rdfs:label ?directorName .
+                        filter(lang(?directorName)='en') . }}
+                optional {{?director dbo:abstract ?abstract .
+                        filter(lang(?abstract)='en') . }}
+            }}
+        """
+        params = {
+            "query": sparql_query,
+            "format": "json"
+        }
+
+        response_directors = requests.get(sparql_endpoint, params=params, headers=headers)
+        if response_directors.status_code == 200:
+            results_directors = response_directors.json()
+            print("Results Directors:", results_directors)  # Print the entire results_directors dictionary for debugging
+
+            directors = []
+
+            if "results" in results_directors and "bindings" in results_directors["results"] and results_directors["results"]["bindings"]:
+                for result in results_directors["results"]["bindings"]:
+                    director = {}
+                    director['iri'] = translate_unicode(result.get('director', {}).get('value', ''))
+                    director['name'] = translate_unicode(result.get('directorName', {}).get('value', ''))
+                    director['abstract'] = translate_unicode(result.get('abstract', {}).get('value', ''))
+                    directors.append(director)
+                    success = True
+            else:
+                print("Error:", response_directors.status_code)
+                print(response_directors.text)
+
+        return directors
+
+
 def fetch_data(offset, limit):
     filmsss = []
     success = False
+    print(f"offset {offset} | limit {limit}")
 
-    while not success:
-        sparql_query_films = f"""
+    query_films = f"""
             PREFIX dbo: <http://dbpedia.org/ontology/>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-            SELECT DISTINCT ?film ?filmName ?filmAbstract ?dir ?prod ?mu ?starring ?label
+            SELECT DISTINCT ?film ?filmName ?filmAbstract ?year ?label
             WHERE
             {{
             ?film a dbo:Film.
@@ -33,16 +216,7 @@ def fetch_data(offset, limit):
             ?film dbo:abstract ?filmAbstract.
 
             OPTIONAL {{
-                ?film dbo:director ?dir.
-            }}
-            OPTIONAL {{
-                ?film dbo:producer ?prod.
-            }}
-            OPTIONAL {{
-                ?film dbo:musicComposer ?mu.
-            }}
-            OPTIONAL {{
-                ?film dbo:starring ?st.
+                ?film dbp:released ?year.
             }}
 
             ?film rdfs:label ?label.
@@ -51,37 +225,26 @@ def fetch_data(offset, limit):
             OFFSET {offset}
             LIMIT {limit}
             """
-
+        
+    while not success:
         params = {
-            "query": sparql_query_films,
+            "query": query_films,
             "format": "json"
         }
 
         response = requests.get(sparql_endpoint, params=params, headers=headers)
-
         if response.status_code == 200:
             results = response.json()
 
             if "results" in results and "bindings" in results["results"] and results["results"]["bindings"]:
                 for result in results["results"]["bindings"]:
-                    film_IRI = result["film"]["value"]
-                    film_name = result["filmName"]["value"]
-                    film_abstract = result["filmAbstract"]["value"]
+                    film = {}
+                    film["iri"] = translate_unicode(result["film"]["value"])
+                    film["name"] = translate_unicode(result["filmName"]["value"])
+                    film["year"] = translate_unicode(result["year"]["value"]) if "year" in result else ""  # Handle case where year is not present
+                    film["abstract"] = result["filmAbstract"]["value"]
+                    filmsss.append(film)
 
-                    director = [r["dir"]["value"] for r in results["results"]["bindings"] if "dir" in r]
-                    producer = [r["prod"]["value"] for r in results["results"]["bindings"] if "prod" in r]
-                    music_composer = [r["mu"]["value"] for r in results["results"]["bindings"] if "mu" in r]
-                    starring = [r["st"]["value"] for r in results["results"]["bindings"] if "st" in r]
-
-                    filmsss.append({
-                        "iri": film_IRI,
-                        "nome": film_name,
-                        "abstract": film_abstract,
-                        "director": director,
-                        "producer": producer,
-                        "music_composer": music_composer,
-                        "starring": starring,
-                    })
                 success = True
                 print(f"Got data for offset: {offset}")
             else:
@@ -92,6 +255,13 @@ def fetch_data(offset, limit):
             print(f"Failed to fetch data for offset {offset}, status code: {response.status_code}")
             time.sleep(1)  # Adding a delay before retrying
 
+    for film in filmsss:
+        print(film)
+        film["directors"] = query_director(film["iri"])
+        film["producers"] = query_producer(film["iri"])
+        film["composers"] = query_music_composer(film["iri"])
+        film["actors"] = query_actors(film["iri"])
+
     return filmsss, offset  # Return films list and offset
 
 def write_to_file(films, file_path, offset, processed_offsets):
@@ -99,7 +269,7 @@ def write_to_file(films, file_path, offset, processed_offsets):
         with open(file_path, "a") as out_file:
             for film in films:
                 json.dump(film, out_file, ensure_ascii=True)
-                out_file.write('\n')
+                out_file.write(',\n')
             print(f"Data appended to file for offset: {offset}")  # Print offset after appending to file
         processed_offsets.add(offset)
 
@@ -125,7 +295,7 @@ def create_filmsjson(file_path, num_sets, num_threads_per_set, limit):
 
 if __name__ == "__main__":
     file_path = "./TPC6/data/data.json"
-    num_sets = 100
-    num_threads_per_set = 10
-    limit = 1000
+    num_sets = 1 #20
+    num_threads_per_set = 1 #10
+    limit = 20 #1000
     create_filmsjson(file_path, num_sets, num_threads_per_set, limit)
