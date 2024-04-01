@@ -27,6 +27,7 @@ def query_actors(movie_iri):
 
     rel = ["dbo:starring", "dbp:starring"]
     i = 0
+    actors = []
     
     success = False
     while not success:
@@ -48,9 +49,7 @@ def query_actors(movie_iri):
 
         if response_.status_code == 200:
             results_ = response_.json()
-            print("Results Actors:", results_)  # Print the entire results_actors dictionary for debugging
-
-            actors = []
+            #print("Results Actors:", results_)  # Print the entire results_actors dictionary for debugging
 
             if "results" in results_ and "bindings" in results_["results"] and results_["results"]["bindings"]:
                 for result in results_["results"]["bindings"]:
@@ -60,17 +59,29 @@ def query_actors(movie_iri):
                     actor['abstract'] = translate_unicode(result.get('abstract', {}).get('value', ''))
                     actors.append(actor)
                     success = True
+
+                    print("Got actors.")
+            #else:
+            #    print("Error:", response_.status_code)
+            #    print(response_.text)
+
             else:
-                print("Error:", response_.status_code)
-                print(response_.text)
-                
+                if i == 0:
+                    i+=1
+                    print("Actors++")
+                else:
+                    print("Error:", response_.status_code)
+                    print(response_.text)
+                    print("No actors.")
+                    break
+
         return actors
 
 def query_music_composer(movie_iri):
 
     rel = ["dbo:musicComposer", "dbp:musicComposer"]
     i = 0
-    
+    composers = []
     success = False
     while not success:
         sparql_query = f"""
@@ -91,9 +102,7 @@ def query_music_composer(movie_iri):
 
         if response_.status_code == 200:
             results_ = response_.json()
-            print("Results Actors:", results_)  # Print the entire results_actors dictionary for debugging
-
-            composers = []
+            #print("Results Actors:", results_)  # Print the entire results_actors dictionary for debugging
 
             if "results" in results_ and "bindings" in results_["results"] and results_["results"]["bindings"]:
                 for result in results_["results"]["bindings"]:
@@ -103,10 +112,17 @@ def query_music_composer(movie_iri):
                     composer['name'] = translate_unicode(result.get('musicComposerName', {}).get('value', ''))
                     composer['abstract'] = translate_unicode(result.get('abstract', {}).get('value', ''))
                     composers.append(composer)
+                    print("Got composer.")
                     success = True
             else:
-                print("Error:", response_.status_code)
-                print(response_.text)
+                if i == 0:
+                    i+=1
+                    print("Composer++")
+                else:
+                    print("Error:", response_.status_code)
+                    print(response_.text)
+                    print("No composer.")
+                    break
                 
         return composers
 
@@ -115,7 +131,7 @@ def query_producer(movie_iri):
 
     rel = ["dbo:producer", "dbp:producer"]
     i = 0
-    
+    producers = []
     success = False
     while not success:
         sparql_query = f"""
@@ -136,9 +152,7 @@ def query_producer(movie_iri):
 
         if response_.status_code == 200:
             results_ = response_.json()
-            print("Results Actors:", results_)  # Print the entire results_actors dictionary for debugging
-
-            producers = []
+            #print("Results Actors:", results_)  # Print the entire results_actors dictionary for debugging
 
             if "results" in results_ and "bindings" in results_["results"] and results_["results"]["bindings"]:
                 for result in results_["results"]["bindings"]:
@@ -147,10 +161,17 @@ def query_producer(movie_iri):
                     producer['name'] = translate_unicode(result.get('producerName', {}).get('value', ''))
                     producer['abstract'] = translate_unicode(result.get('abstract', {}).get('value', ''))
                     producers.append(producer)
+                    print("Got producer.")
                     success = True
             else:
-                print("Error:", response_.status_code)
-                print(response_.text)
+                if i == 0:
+                    i+=1
+                    print("Producer++")
+                else:
+                    print("Error:", response_.status_code)
+                    print(response_.text)
+                    print("No producer.")
+                    break
                 
         return producers
 
@@ -160,7 +181,7 @@ def query_director(movie_iri):
 
     rel = ["dbo:director", "dbp:director"]
     i = 0
-    
+    directors = []
     success = False
     while not success:
         sparql_query = f"""
@@ -180,9 +201,7 @@ def query_director(movie_iri):
         response_directors = requests.get(sparql_endpoint, params=params, headers=headers)
         if response_directors.status_code == 200:
             results_directors = response_directors.json()
-            print("Results Directors:", results_directors)  # Print the entire results_directors dictionary for debugging
-
-            directors = []
+            #print("Results Directors:", results_directors)  # Print the entire results_directors dictionary for debugging
 
             if "results" in results_directors and "bindings" in results_directors["results"] and results_directors["results"]["bindings"]:
                 for result in results_directors["results"]["bindings"]:
@@ -191,10 +210,18 @@ def query_director(movie_iri):
                     director['name'] = translate_unicode(result.get('directorName', {}).get('value', ''))
                     director['abstract'] = translate_unicode(result.get('abstract', {}).get('value', ''))
                     directors.append(director)
+                    print("Got director.")
                     success = True
             else:
-                print("Error:", response_directors.status_code)
-                print(response_directors.text)
+                if i == 0:
+                    i+=1
+                    print("Director++")
+                else:
+                    print("Error:", response_directors.status_code)
+                    print(response_directors.text)
+                    print("No director.")
+                    break
+
 
         return directors
 
@@ -256,7 +283,7 @@ def fetch_data(offset, limit):
             time.sleep(1)  # Adding a delay before retrying
 
     for film in filmsss:
-        print(film)
+        #print(film)
         film["directors"] = query_director(film["iri"])
         film["producers"] = query_producer(film["iri"])
         film["composers"] = query_music_composer(film["iri"])
@@ -295,7 +322,7 @@ def create_filmsjson(file_path, num_sets, num_threads_per_set, limit):
 
 if __name__ == "__main__":
     file_path = "./TPC6/data/data.json"
-    num_sets = 1 #20
-    num_threads_per_set = 1 #10
-    limit = 20 #1000
+    num_sets = 2 #200
+    num_threads_per_set = 10 #10
+    limit = 10 #100
     create_filmsjson(file_path, num_sets, num_threads_per_set, limit)
