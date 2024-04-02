@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet href='static/style.xsl' type='text/xsl'?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2024-04-02T16:24:27Z</responseDate>
+    <request verb="ListSets">https://repositorium.sdum.uminho.pt/oai/oai</request>
+    <ListSets>
+        <set>
+            <setSpec>com_1822_1907</setSpec>
+            <setName>&lt;a)>(2008 - 2018) Física Atómica, Molecular e Óptica | Atomic, Molecular and Optical Physics</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_819</setSpec>
+            <setName>&lt;a)>Centro de Estudos de Comunicação e Sociedade</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_45565</setSpec>
+            <setName>&lt;a)>Centro de Ética, Política e Sociedade | Centre for Ethics, Politics and Society</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_19458</setSpec>
+            <setName>&lt;a)>ED - Departamento de Ciências Jurídicas Gerais</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_15039</setSpec>
+            <setName>&lt;a)>Escola de Economia e Gestão</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1901</setSpec>
+            <setName>&lt;b)> (2008 - 2018) Fenómenos Cooperativos em Dieléctricos | Cooperative Phenomena in Dielectrics</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_41223</setSpec>
+            <setName>&lt;b)>Centro de Estudos em Geografia e Ordenamento do Território - UMinho</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_14314</setSpec>
+            <setName>&lt;b)>Centro de Investigação em Marketing e Estratégia</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_19459</setSpec>
+            <setName>&lt;b)>ED - Departamento de Ciências Jurídico-Privatísticas</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1895</setSpec>
+            <setName>&lt;c)> (2008 - 2018) Física Computacional e Teórica | Computational and Theoretical Physics</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_35597</setSpec>
+            <setName>&lt;c)>Centro Interdisciplinar de Ciências Sociais - UMinho</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_19461</setSpec>
+            <setName>&lt;c)>ED - Departamento de Ciências Jurídicas Públicas</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_2420</setSpec>
+            <setName>&lt;c)>Núcleo de Estudos em Administração e Políticas Públicas</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1889</setSpec>
+            <setName>&lt;d)> (2008 - 2018) Física dos Materiais Nano Cristalinos | Physics of the Nano-Crystalline Materials</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_23620</setSpec>
+            <setName>&lt;d)>Centro em Rede de Investigação em Antropologia - UMinho</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1060</setSpec>
+            <setName>&lt;d)>Núcleo de Investigação em Microeconomia Aplicada</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1883</setSpec>
+            <setName>&lt;e)> (2008 - 2018) Revestimentos Funcionais | Functional Coatings</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_41202</setSpec>
+            <setName>&lt;e)>Laboratório de Paisagens, Património e Território</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_980</setSpec>
+            <setName>&lt;e)>Núcleo de Investigação em Políticas Económicas</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1914</setSpec>
+            <setName>&lt;f)> (2008 - 2018) Complexidade e Propriedades Electrónicas | Complexity and Electronic Properties</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_153</setSpec>
+            <setName>&lt;f)>Núcleo de Estudos em Gestão</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1877</setSpec>
+            <setName>&lt;g)> (2008 - 2018) Óptica e Ciências da Visão | Optics and Vision Science</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1868</setSpec>
+            <setName>&lt;h)> Ensino da Física | Physics Teaching (2008 - ...)</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_3712</setSpec>
+            <setName>3B's - Biomaterials, Materiais Biodegradáveis e Biomiméticos</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_70638</setSpec>
+            <setName>Arquivo Distrital de Braga</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1</setSpec>
+            <setName>Biblioteca da Universidade do Minho | University of Minho Library</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_9381</setSpec>
+            <setName>C-TAC - Territory, Environment and Construction Centre</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_74913</setSpec>
+            <setName>Casa de Sarmento: Centro de Estudos do Património</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_64612</setSpec>
+            <setName>Center for MicroElectroMechanics Systems (CMEMS)</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_14394</setSpec>
+            <setName>Centro ALGORITMI</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_69203</setSpec>
+            <setName>Centro de Biologia Molecular de Plantas</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_68464</setSpec>
+            <setName>Centro de Biologia Molecular e Ambiental</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1220</setSpec>
+            <setName>Centro de Ciências da Terra | Earth Sciences Centre</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_21290</setSpec>
+            <setName>Centro de Ciências e Tecnologias da Computação</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_18</setSpec>
+            <setName>Centro de Engenharia Biológica | Centre of Biological Engineering</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1088</setSpec>
+            <setName>Centro de Engenharia Civil</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_5008</setSpec>
+            <setName>Centro de Engenharia de Sistemas de Produção</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_64613</setSpec>
+            <setName>Centro de Engenharia Mecânica e Suste​ntabilidade de Recursos (MEtRICs)</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_2102</setSpec>
+            <setName>Centro de Estudos Humanísticos da Universidade do Minho</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1867</setSpec>
+            <setName>Centro de Física e Departamento de Física</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_20934</setSpec>
+            <setName>Centro de Gestão Industrial e da Tecnologia | Research Centre for Industrial and Technology Management</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_54060</setSpec>
+            <setName>Centro de Investigação em Ciência Política</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_428</setSpec>
+            <setName>Centro de Investigação em Educação</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_12679</setSpec>
+            <setName>Centro de Investigação em Estudos da Criança</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1211</setSpec>
+            <setName>Centro de Investigação em Interfaces e Comportamento de Superfícies</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_969</setSpec>
+            <setName>Centro de Investigação em Psicologia</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_11567</setSpec>
+            <setName>Centro de Investigação Geológica, Ordenamento e Valorização de Recursos</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1234</setSpec>
+            <setName>Centro de Matemática da Universidade do Minho</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_12022</setSpec>
+            <setName>Centro de Tecnologias Mecânicas e de Materiais</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_10933</setSpec>
+            <setName>Centro e-learning @ TecMinho | Gabinete de Formação Contínua</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1200</setSpec>
+            <setName>Centro Interdisciplinar de Tecnologias de Produção e da Energia</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_910</setSpec>
+            <setName>Centro\Departamento de Química</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_5305</setSpec>
+            <setName>Comunicação e Sociedade</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_956</setSpec>
+            <setName>Departamento de Biologia</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_41197</setSpec>
+            <setName>Departamento de Ciências da Comunicação</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_2447</setSpec>
+            <setName>Departamento de Ciências da Educação da Criança</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_2436</setSpec>
+            <setName>Departamento de Ciências Integradas e Língua Materna</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1273</setSpec>
+            <setName>Departamento de Electrónica Industrial</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_9380</setSpec>
+            <setName>Departamento de Engenharia Civil</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_45</setSpec>
+            <setName>Departamento de Engenharia de Polímeros</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1189</setSpec>
+            <setName>Departamento de Engenharia Mecânica</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1039</setSpec>
+            <setName>Departamento de Engenharia Têxtil | Centro de Ciência e Tecnologia Têxtil</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_2409</setSpec>
+            <setName>Departamento de Expressões Artísticas e Educação Física</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_4553</setSpec>
+            <setName>Departamento de Geografia</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_8175</setSpec>
+            <setName>Departamento de História</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_21292</setSpec>
+            <setName>Departamento de Informática</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_401</setSpec>
+            <setName>Departamento de Informática | Centro de Ciências e Tecnologias da Computação</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1228</setSpec>
+            <setName>Departamento de Matemática</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_12238</setSpec>
+            <setName>Departamento de Matemática e Aplicações</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_5004</setSpec>
+            <setName>Departamento de Produção e Sistemas</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_27</setSpec>
+            <setName>Departamento de Sistemas de Informação</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_41220</setSpec>
+            <setName>Departamento de Sociologia</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_3096</setSpec>
+            <setName>Departamento de Sociologia | Centro de Investigação em Ciências Sociais</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_19464</setSpec>
+            <setName>ED - Centro de Estudos em Direito da União Europeia (CEDU)</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_65559</setSpec>
+            <setName>ED - Centro de Investigação em Justiça e Governação (JusGov)</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_19463</setSpec>
+            <setName>ED - Direitos Humanos - Centro de Investigação Interdisciplinar (DH-CII)</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1835</setSpec>
+            <setName>Escola de Arquitetura, Arte e Design | School of Architecture, Art and Design</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_24165</setSpec>
+            <setName>Escola de Ciências | School of Sciences</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_19448</setSpec>
+            <setName>Escola de Direito | School of Law</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_19717</setSpec>
+            <setName>Escola de Economia e Gestão | School of Economics and Management</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_12004</setSpec>
+            <setName>Escola de Engenharia | School of Engineering</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_2080</setSpec>
+            <setName>Escola de Letras Artes e Ciências Humanas | School of Arts and Humanities</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_44201</setSpec>
+            <setName>Escola de Medicina | School of Medicine</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_44200</setSpec>
+            <setName>Escola de Psicologia | School of Psychology</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_10625</setSpec>
+            <setName>Escola Superior de Enfermagem | School of Nursing</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1091</setSpec>
+            <setName>Estruturas</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1092</setSpec>
+            <setName>Geotecnia</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1090</setSpec>
+            <setName>Gestão e Tecnologia da Construção</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_734</setSpec>
+            <setName>Grupo de História das Populações/CITCEM</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_21291</setSpec>
+            <setName>HASLab - High-Assurance Software Laboratory</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1093</setSpec>
+            <setName>Hidráulica</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_41218</setSpec>
+            <setName>ICS - Histórico</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_44208</setSpec>
+            <setName>IEC - Histórico</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_41192</setSpec>
+            <setName>Instituto de Ciências Sociais | Institute of Social Sciences</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_44203</setSpec>
+            <setName>Instituto de Educação | Institute of Education</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_1027</setSpec>
+            <setName>Instituto de Investigação em Ciências da Vida e da Saúde</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_57275</setSpec>
+            <setName>Instituto de Investigação I3Bs | Research Institute I3Bs</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_44210</setSpec>
+            <setName>Interfaces da Universidade do Minho | University of Minho interfaces</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_3710</setSpec>
+            <setName>IPC - Instituto de Polímeros e Compósitos</setName>
+        </set>
+        <set>
+            <setSpec>com_1822_9382</setSpec>
+            <setName>ISISE - Institute for Sustainability and Innovation in Structural Engineering</setName>
+        </set>
+        <resumptionToken completeListSize="1001" cursor="0">////100</resumptionToken>
+    </ListSets>
+</OAI-PMH>

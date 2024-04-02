@@ -16,7 +16,8 @@ films = set()    # Set to store unique films
 i = 0
 
 for index_film, film in enumerate(data):
-    film_uri = URIRef(film['iri'])
+    id = film['iri'].split('//')[-1]
+    film_uri = URIRef(f"{nmp}{id}")
 
     # Adding film as an individual of class Film
     g.add((film_uri, RDF.type, OWL.NamedIndividual))  
@@ -29,7 +30,10 @@ for index_film, film in enumerate(data):
 
     # Adding directors
     for director in film.get('directors', []):
-        director_uri = URIRef(director['iri'])
+        #director_uri = URIRef(director['iri'].split('//')[-1])
+
+        id = director['iri'].split('//')[-1]
+        director_uri = URIRef(f"{nmp}{director}{id}")
 
         if director_uri not in persons:
             # Adding director as an individual of class Person
@@ -42,7 +46,7 @@ for index_film, film in enumerate(data):
 
     # Adding producers
     for producer in film.get('producers', []):
-        producer_uri = URIRef(producer['iri'])
+        producer_uri = URIRef(producer['iri'].split('//')[-1])
 
         if producer_uri not in persons:
             # Adding producer as an individual of class Person
@@ -55,7 +59,7 @@ for index_film, film in enumerate(data):
 
     # Adding composers
     for composer in film.get('composers', []):
-        composer_uri = URIRef(composer['iri'])
+        composer_uri = URIRef(composer['iri'].split('//')[-1])
 
         if composer_uri not in persons:
             # Adding composer as an individual of class Person
