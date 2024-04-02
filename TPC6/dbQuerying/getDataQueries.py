@@ -60,7 +60,7 @@ def query_actors(movie_iri):
                     actors.append(actor)
                     success = True
 
-                    print("Got actors.")
+                    #print("Got actors.")
             #else:
             #    print("Error:", response_.status_code)
             #    print(response_.text)
@@ -68,11 +68,11 @@ def query_actors(movie_iri):
             else:
                 if i == 0:
                     i+=1
-                    print("Actors++")
+                    #print("Actors++")
                 else:
                     print("Error:", response_.status_code)
                     print(response_.text)
-                    print("No actors.")
+                    #print("No actors.")
                     break
 
         return actors
@@ -112,16 +112,16 @@ def query_music_composer(movie_iri):
                     composer['name'] = translate_unicode(result.get('musicComposerName', {}).get('value', ''))
                     composer['abstract'] = translate_unicode(result.get('abstract', {}).get('value', ''))
                     composers.append(composer)
-                    print("Got composer.")
+                    #print("Got composer.")
                     success = True
             else:
                 if i == 0:
                     i+=1
-                    print("Composer++")
+                    #print("Composer++")
                 else:
                     print("Error:", response_.status_code)
                     print(response_.text)
-                    print("No composer.")
+                    #print("No composer.")
                     break
                 
         return composers
@@ -161,16 +161,16 @@ def query_producer(movie_iri):
                     producer['name'] = translate_unicode(result.get('producerName', {}).get('value', ''))
                     producer['abstract'] = translate_unicode(result.get('abstract', {}).get('value', ''))
                     producers.append(producer)
-                    print("Got producer.")
+                    #print("Got producer.")
                     success = True
             else:
                 if i == 0:
                     i+=1
-                    print("Producer++")
+                    #print("Producer++")
                 else:
                     print("Error:", response_.status_code)
                     print(response_.text)
-                    print("No producer.")
+                    #print("No producer.")
                     break
                 
         return producers
@@ -210,16 +210,16 @@ def query_director(movie_iri):
                     director['name'] = translate_unicode(result.get('directorName', {}).get('value', ''))
                     director['abstract'] = translate_unicode(result.get('abstract', {}).get('value', ''))
                     directors.append(director)
-                    print("Got director.")
+                    #print("Got director.")
                     success = True
             else:
                 if i == 0:
                     i+=1
-                    print("Director++")
+                    #print("Director++")
                 else:
                     print("Error:", response_directors.status_code)
                     print(response_directors.text)
-                    print("No director.")
+                    #print("No director.")
                     break
 
 
@@ -235,7 +235,7 @@ def fetch_data(offset, limit):
             PREFIX dbo: <http://dbpedia.org/ontology/>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-            SELECT DISTINCT ?film ?filmName ?filmAbstract ?year ?label
+            SELECT DISTINCT ?film ?filmName ?filmAbstract ?year ?category ?book ?bookName ?label
             WHERE
             {{
             ?film a dbo:Film.
@@ -244,6 +244,16 @@ def fetch_data(offset, limit):
 
             OPTIONAL {{
                 ?film dbp:released ?year.
+            }}
+
+            OPTIONAL {{
+                ?film dbo:basedOn ?book.
+                ?book rdfs:label ?bookName.
+                FILTER(LANG(?bookName) = "en").
+            }}
+
+            OPTIONAL {{
+                ?film dbo:genre ?category.
             }}
 
             ?film rdfs:label ?label.
@@ -269,6 +279,11 @@ def fetch_data(offset, limit):
                     film["iri"] = translate_unicode(result["film"]["value"])
                     film["name"] = translate_unicode(result["filmName"]["value"])
                     film["year"] = translate_unicode(result["year"]["value"]) if "year" in result else ""  # Handle case where year is not present
+                    film["book"] = {
+                        "iri":translate_unicode(result["book"]["value"]) if "book" in result else "",
+                        "name": translate_unicode(result["bookName"]["value"]) if "bookName" in result else ""
+                    }
+                    film["category"] = translate_unicode(result["category"]["value"]) if "category" in result else ""
                     film["abstract"] = result["filmAbstract"]["value"]
                     filmsss.append(film)
 
@@ -322,7 +337,7 @@ def create_filmsjson(file_path, num_sets, num_threads_per_set, limit):
 
 if __name__ == "__main__":
     file_path = "./TPC6/data/data.json"
-    num_sets = 2 #200
+    num_sets = 1#30
     num_threads_per_set = 10 #10
-    limit = 10 #100
+    limit = 100 #100
     create_filmsjson(file_path, num_sets, num_threads_per_set, limit)
