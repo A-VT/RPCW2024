@@ -1,0 +1,248 @@
+@prefix : <http://rpcw.di.uminho.pt/2024/cinema//> .
+@prefix ns1: <http://rpcw.di.uminho.pt/2024/cinema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dbpedia.org/resource/Cabaret_Woman> a ns1:Film,
+        owl:NamedIndividual ;
+    ns1:abstract "Cabaret Woman (Spanish:Una mujer de cabaret) is a 1974 Spanish comedy film directed by Pedro Lazaga and starring Carmen Sevilla and José María Rodero." ;
+    ns1:acted_in <http://dbpedia.org/resource/Carmen_Sevilla>,
+        <http://dbpedia.org/resource/José_María_Rodero> ;
+    ns1:composed_by <http://dbpedia.org/resource/Augusto_Algueró> ;
+    ns1:directed_by <http://dbpedia.org/resource/Pedro_Lazaga> ;
+    ns1:name "Cabaret Woman" ;
+    ns1:year "1974-12-02" .
+
+<http://dbpedia.org/resource/Cacería> a ns1:Film,
+        owl:NamedIndividual ;
+    ns1:abstract "Cacería (English language: Man Hunt) is a 2002 Argentine action thriller film directed and written by and Jorge Bechara. Starring Luis Luque, Claribel Medina, and Carlos Leyes." ;
+    ns1:composed_by <http://dbpedia.org/resource/Mariano_Nuñez_West> ;
+    ns1:directed_by <http://dbpedia.org/resource/Ezio_Massa> ;
+    ns1:name "Cacería" ;
+    ns1:produced_by <http://dbpedia.org/resource/Marcelo_Altmark> ;
+    ns1:year "2002-04-11" .
+
+<http://dbpedia.org/resource/Cactus_Flower_(film)> a ns1:Film,
+        owl:NamedIndividual ;
+    ns1:abstract "Cactus Flower is a 1969 American screwball comedy film directed by Gene Saks and starring Walter Matthau, Ingrid Bergman, and Goldie Hawn, who won an Academy Award for her performance. Along with Hello Dolly!, are the movies that end the Golden Age of Hollywood.[citation?] The screenplay was adapted by I. A. L. Diamond from the 1965 Broadway play of the same name written by Abe Burrows, which in turn was based upon the French play Fleur de cactus by Pierre Barillet and Jean-Pierre Gredy. Cactus Flower was the ninth highest-grossing film of 1969." ;
+    ns1:acted_in <http://dbpedia.org/resource/Goldie_Hawn>,
+        <http://dbpedia.org/resource/Ingrid_Bergman>,
+        <http://dbpedia.org/resource/Walter_Matthau> ;
+    ns1:composed_by <http://dbpedia.org/resource/Quincy_Jones> ;
+    ns1:directed_by <http://dbpedia.org/resource/Gene_Saks> ;
+    ns1:name "Cactus Flower" ;
+    ns1:produced_by <http://dbpedia.org/resource/Mike_Frankovich> ;
+    ns1:year "1969" .
+
+<http://dbpedia.org/resource/Caddie_(film)> a ns1:Film,
+        owl:NamedIndividual ;
+    ns1:abstract "Caddie is an Australian film biopic directed by Donald Crombie and produced by Anthony Buckley. Released on 1 April 1976, it is representative of the Australian film renaissance which occurred during that decade. Set mainly in Sydney during the 1920s and 1930s, including the Great Depression, it portrays the life of a young middle class woman struggling to raise two children after her marriage breaks up. Based on Caddie, the Story of a Barmaid, a partly fictitious autobiography of Catherine Beatrice \"Caddie\" Edmonds, it made Helen Morse a local star and earned Jacki Weaver and Melissa Jaffer each an Australian Film Institute Award." ;
+    ns1:acted_in <http://dbpedia.org/resource/Helen_Morse>,
+        <http://dbpedia.org/resource/Jack_Thompson_(actor)>,
+        <http://dbpedia.org/resource/Jacki_Weaver> ;
+    ns1:directed_by <http://dbpedia.org/resource/Donald_Crombie> ;
+    ns1:name "Caddie" ;
+    ns1:produced_by <http://dbpedia.org/resource/Anthony_Buckley> ;
+    ns1:year "1976-04-01" .
+
+<http://dbpedia.org/resource/Cadet_Holiday> a ns1:Film,
+        owl:NamedIndividual ;
+    ns1:abstract "Cadet Holiday is an 11-minute 1951 Canadian documentary film, made by the National Film Board of Canada (NFB) as part of the postwar Canada Carries On series. The film, directed by David Bairstow, Robert Humble and Douglas Wilkinson, was produced by Sydney Newman and Michael Spencer. Cadet Holiday was an account of a Canadian Army Cadet during a summer camp. The film's French version title is Cadets en vacances." ;
+    ns1:composed_by <http://dbpedia.org/resource/Robert_Fleming_(composer)> ;
+    ns1:directed_by <http://dbpedia.org/resource/David_Bairstow_(director)> ;
+    ns1:name "Cadet Holiday" ;
+    ns1:produced_by <http://dbpedia.org/resource/Michael_Spencer_(producer)>,
+        <http://dbpedia.org/resource/Sydney_Newman> ;
+    ns1:year "ref|The NFB production date indicates 1950.|group=Note" .
+
+<http://dbpedia.org/resource/Caesar_and_Cleopatra_(film)> a ns1:Film,
+        owl:NamedIndividual ;
+    ns1:abstract "Caesar and Cleopatra is a 1945 British Technicolor film directed by Gabriel Pascal and starring Vivien Leigh and Claude Rains. Some scenes were directed by Brian Desmond Hurst, who took no formal credit. The picture was adapted from the play Caesar and Cleopatra (1901) by George Bernard Shaw, produced by Independent Producers and Pascal Film Productions and distributed by Eagle-Lion Distributors. Upon release, Caesar and Cleopatra failed to earn back its colossal budget. John Bryan was nominated for an Oscar for Best Art Direction." ;
+    ns1:acted_in <http://dbpedia.org/resource/Claude_Rains>,
+        <http://dbpedia.org/resource/Vivien_Leigh> ;
+    ns1:composed_by <http://dbpedia.org/resource/Georges_Auric> ;
+    ns1:directed_by <http://dbpedia.org/resource/Gabriel_Pascal> ;
+    ns1:name "Caesar and Cleopatra" ;
+    ns1:produced_by <http://dbpedia.org/resource/Gabriel_Pascal> ;
+    ns1:year "--09-06",
+        "--09-16",
+        "--12-11" .
+
+<http://dbpedia.org/resource/Cafe_Colette> a ns1:Film,
+        owl:NamedIndividual ;
+    ns1:abstract "Cafe Colette is a 1937 British thriller film directed by Paul L. Stein and starring Paul Cavanagh, Greta Nissen in her final film role and Sally Gray. It was also released under the alternative title Danger in Paris. The film was made at Wembley Studios." ;
+    ns1:directed_by <http://dbpedia.org/resource/Paul_L._Stein> ;
+    ns1:name "Cafe Colette" ;
+    ns1:year "1937" .
+
+<http://dbpedia.org/resource/Cafe_Moscow> a ns1:Film,
+        owl:NamedIndividual ;
+    ns1:abstract "Cafe Moscow (Hungarian:Café Moszkva) is a 1936 Hungarian adventure film directed by Steve Sekely and starring Anna Tõkés, Gyula Csortos and Ferenc Kiss. Art direction was by . It is also known by the alternative title Only One Night. The film is set during the First World War on the Eastern Front between Russia and the Austro-Hungarian Empire. The film was intended to convey an anti-war message." ;
+    ns1:composed_by <http://dbpedia.org/resource/Alexander_Laszlo_(composer)> ;
+    ns1:directed_by <http://dbpedia.org/resource/Steve_Sekely> ;
+    ns1:name "Cafe Moscow" ;
+    ns1:year "1936-02-13" .
+
+ns1: a owl:Ontology .
+
+:acted_in a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Film ;
+    owl:inverseOf :with_actor .
+
+:based_on a owl:ObjectProperty ;
+    rdfs:domain :Film ;
+    rdfs:range :Book .
+
+:book_name a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+:category_name a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+:composed_by a owl:ObjectProperty ;
+    rdfs:domain :Film ;
+    rdfs:range :Person ;
+    owl:inverseOf :composed_for .
+
+:directed a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Film ;
+    owl:inverseOf :directed_by .
+
+:film_abstract a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+:film_name a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+:person_abstract a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+:person_name a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+:produced a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Film ;
+    owl:inverseOf :produced_by .
+
+:release_year a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+:with_category a owl:ObjectProperty ;
+    rdfs:domain :Film ;
+    rdfs:range :Category .
+
+<http://dbpedia.org/resource/Alexander_Laszlo_(composer)> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Anthony_Buckley> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Augusto_Algueró> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Carmen_Sevilla> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Claude_Rains> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/David_Bairstow_(director)> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Donald_Crombie> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Ezio_Massa> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Gene_Saks> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Georges_Auric> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Goldie_Hawn> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Helen_Morse> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Ingrid_Bergman> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Jack_Thompson_(actor)> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Jacki_Weaver> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/José_María_Rodero> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Marcelo_Altmark> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Mariano_Nuñez_West> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Michael_Spencer_(producer)> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Mike_Frankovich> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Paul_L._Stein> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Pedro_Lazaga> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Quincy_Jones> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Robert_Fleming_(composer)> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Steve_Sekely> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Sydney_Newman> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Vivien_Leigh> a ns1:Person,
+        owl:NamedIndividual .
+
+<http://dbpedia.org/resource/Walter_Matthau> a ns1:Person,
+        owl:NamedIndividual .
+
+:Book a owl:Class .
+
+:Category a owl:Class .
+
+:composed_for a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Film .
+
+:directed_by a owl:ObjectProperty ;
+    rdfs:domain :Film ;
+    rdfs:range :Person .
+
+:produced_by a owl:ObjectProperty ;
+    rdfs:domain :Film ;
+    rdfs:range :Person .
+
+:with_actor a owl:ObjectProperty ;
+    rdfs:domain :Film ;
+    rdfs:range :Person .
+
+<http://dbpedia.org/resource/Gabriel_Pascal> a ns1:Person,
+        owl:NamedIndividual .
+
+:Person a owl:Class .
+
+:Film a owl:Class .
+
