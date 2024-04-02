@@ -235,7 +235,7 @@ def fetch_data(offset, limit):
             PREFIX dbo: <http://dbpedia.org/ontology/>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-            SELECT DISTINCT ?film ?filmName ?filmAbstract ?year ?category ?book ?bookName ?label
+            SELECT DISTINCT ?film ?filmName ?filmAbstract ?year ?category ?catLabel ?book ?bookName ?label
             WHERE
             {{
             ?film a dbo:Film.
@@ -254,6 +254,7 @@ def fetch_data(offset, limit):
 
             OPTIONAL {{
                 ?film dbo:genre ?category.
+                ?category rdfs:label ?catLabel
             }}
 
             ?film rdfs:label ?label.
@@ -279,11 +280,16 @@ def fetch_data(offset, limit):
                     film["iri"] = translate_unicode(result["film"]["value"])
                     film["name"] = translate_unicode(result["filmName"]["value"])
                     film["year"] = translate_unicode(result["year"]["value"]) if "year" in result else ""  # Handle case where year is not present
-                    film["book"] = {
-                        "iri":translate_unicode(result["book"]["value"]) if "book" in result else "",
-                        "name": translate_unicode(result["bookName"]["value"]) if "bookName" in result else ""
-                    }
-                    film["category"] = translate_unicode(result["category"]["value"]) if "category" in result else ""
+                    if  "book" in result:
+                        film["book"] = {
+                            "iri":translate_unicode(result["book"]["value"]),
+                            "name": translate_unicode(result["bookName"]["value"])
+                        }
+                    if "category" in result:
+                        film["category"] = {
+                            "iri": translate_unicode(result["category"]["value"]),
+                            "name": translate_unicode(result["catLabel"]["value"])
+                        }
                     film["abstract"] = result["filmAbstract"]["value"]
                     filmsss.append(film)
 
@@ -317,6 +323,8 @@ def write_to_file(films, file_path, offset, processed_offsets):
 
 def create_filmsjson(file_path, num_sets, num_threads_per_set, limit):
     empty_file(file_path)
+    with open(file_path, "a") as out_file:
+        out_file.write("[\n")
     processed_offsets = set()
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_threads_per_set) as executor:
@@ -337,7 +345,9 @@ def create_filmsjson(file_path, num_sets, num_threads_per_set, limit):
 
 if __name__ == "__main__":
     file_path = "./TPC6/data/data.json"
-    num_sets = 1#30
+    num_sets = 30 #30
     num_threads_per_set = 10 #10
     limit = 100 #100
     create_filmsjson(file_path, num_sets, num_threads_per_set, limit)
+    with open(file_path, "a") as out_file:
+        out_file.write("]\n")
