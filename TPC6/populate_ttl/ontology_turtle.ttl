@@ -1,138 +1,138 @@
-@prefix : <http://rpcw.di.uminho.pt/2024/cinema//> .
+@prefix : <http://rpcw.di.uminho.pt/2024/cinema/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://rpcw.di.uminho.pt/2024/cinema//> .
+@base <http://rpcw.di.uminho.pt/2024/cinema/> .
 
-<http://rpcw.di.uminho.pt/2024/cinema/> rdf:type owl:Ontology .
+<http://rpcw.di.uminho.pt/2024/cinema> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#acted_in
-:acted_in rdf:type owl:ObjectProperty ;
-          owl:inverseOf :with_actor ;
-          rdfs:domain :Person ;
-          rdfs:range :Film .
+###  http://rpcw.di.uminho.pt/2024/cinema//acted_in
+<http://rpcw.di.uminho.pt/2024/cinema//acted_in> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <http://rpcw.di.uminho.pt/2024/cinema//with_actor> ;
+                                                 rdfs:domain <http://rpcw.di.uminho.pt/2024/cinema//Person> ;
+                                                 rdfs:range <http://rpcw.di.uminho.pt/2024/cinema//Film> .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#based_on
-:based_on rdf:type owl:ObjectProperty ;
-          rdfs:domain :Film ;
-          rdfs:range :Book .
+###  http://rpcw.di.uminho.pt/2024/cinema//based_on
+<http://rpcw.di.uminho.pt/2024/cinema//based_on> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://rpcw.di.uminho.pt/2024/cinema//Film> ;
+                                                 rdfs:range <http://rpcw.di.uminho.pt/2024/cinema//Book> .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#composed_by
-:composed_by rdf:type owl:ObjectProperty ;
-             owl:inverseOf :composed_for ;
-             rdfs:domain :Film ;
-             rdfs:range :Person .
+###  http://rpcw.di.uminho.pt/2024/cinema//composed_by
+<http://rpcw.di.uminho.pt/2024/cinema//composed_by> rdf:type owl:ObjectProperty ;
+                                                    owl:inverseOf <http://rpcw.di.uminho.pt/2024/cinema//composed_for> ;
+                                                    rdfs:domain <http://rpcw.di.uminho.pt/2024/cinema//Film> ;
+                                                    rdfs:range <http://rpcw.di.uminho.pt/2024/cinema//Person> .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#composed_for
-:composed_for rdf:type owl:ObjectProperty ;
-              rdfs:domain :Person ;
-              rdfs:range :Film .
+###  http://rpcw.di.uminho.pt/2024/cinema//composed_for
+<http://rpcw.di.uminho.pt/2024/cinema//composed_for> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <http://rpcw.di.uminho.pt/2024/cinema//Person> ;
+                                                     rdfs:range <http://rpcw.di.uminho.pt/2024/cinema//Film> .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#directed
-:directed rdf:type owl:ObjectProperty ;
-          owl:inverseOf :directed_by ;
-          rdfs:domain :Person ;
-          rdfs:range :Film .
+###  http://rpcw.di.uminho.pt/2024/cinema//directed
+<http://rpcw.di.uminho.pt/2024/cinema//directed> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <http://rpcw.di.uminho.pt/2024/cinema//directed_by> ;
+                                                 rdfs:domain <http://rpcw.di.uminho.pt/2024/cinema//Person> ;
+                                                 rdfs:range <http://rpcw.di.uminho.pt/2024/cinema//Film> .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#directed_by
-:directed_by rdf:type owl:ObjectProperty ;
-             rdfs:domain :Film ;
-             rdfs:range :Person .
+###  http://rpcw.di.uminho.pt/2024/cinema//directed_by
+<http://rpcw.di.uminho.pt/2024/cinema//directed_by> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://rpcw.di.uminho.pt/2024/cinema//Film> ;
+                                                    rdfs:range <http://rpcw.di.uminho.pt/2024/cinema//Person> .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#produced
-:produced rdf:type owl:ObjectProperty ;
-          owl:inverseOf :produced_by ;
-          rdfs:domain :Person ;
-          rdfs:range :Film .
+###  http://rpcw.di.uminho.pt/2024/cinema//produced
+<http://rpcw.di.uminho.pt/2024/cinema//produced> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <http://rpcw.di.uminho.pt/2024/cinema//produced_by> ;
+                                                 rdfs:domain <http://rpcw.di.uminho.pt/2024/cinema//Person> ;
+                                                 rdfs:range <http://rpcw.di.uminho.pt/2024/cinema//Film> .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#produced_by
-:produced_by rdf:type owl:ObjectProperty ;
-             rdfs:domain :Film ;
-             rdfs:range :Person .
+###  http://rpcw.di.uminho.pt/2024/cinema//produced_by
+<http://rpcw.di.uminho.pt/2024/cinema//produced_by> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://rpcw.di.uminho.pt/2024/cinema//Film> ;
+                                                    rdfs:range <http://rpcw.di.uminho.pt/2024/cinema//Person> .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#with_actor
-:with_actor rdf:type owl:ObjectProperty ;
-            rdfs:domain :Film ;
-            rdfs:range :Person .
+###  http://rpcw.di.uminho.pt/2024/cinema//with_actor
+<http://rpcw.di.uminho.pt/2024/cinema//with_actor> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://rpcw.di.uminho.pt/2024/cinema//Film> ;
+                                                   rdfs:range <http://rpcw.di.uminho.pt/2024/cinema//Person> .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#with_category
-:with_category rdf:type owl:ObjectProperty ;
-               rdfs:domain :Film ;
-               rdfs:range :Category .
+###  http://rpcw.di.uminho.pt/2024/cinema//with_category
+<http://rpcw.di.uminho.pt/2024/cinema//with_category> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <http://rpcw.di.uminho.pt/2024/cinema//Film> ;
+                                                      rdfs:range <http://rpcw.di.uminho.pt/2024/cinema//Category> .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#book_name
-:book_name rdf:type owl:DatatypeProperty ;
-           rdfs:range xsd:string .
+###  http://rpcw.di.uminho.pt/2024/cinema//book_name
+<http://rpcw.di.uminho.pt/2024/cinema//book_name> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:range xsd:string .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#category_name
-:category_name rdf:type owl:DatatypeProperty ;
-               rdfs:range xsd:string .
+###  http://rpcw.di.uminho.pt/2024/cinema//category_name
+<http://rpcw.di.uminho.pt/2024/cinema//category_name> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:range xsd:string .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#film_abstract
-:film_abstract rdf:type owl:DatatypeProperty ;
-               rdfs:range xsd:string .
+###  http://rpcw.di.uminho.pt/2024/cinema//film_abstract
+<http://rpcw.di.uminho.pt/2024/cinema//film_abstract> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:range xsd:string .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#film_name
-:film_name rdf:type owl:DatatypeProperty ;
-           rdfs:range xsd:string .
+###  http://rpcw.di.uminho.pt/2024/cinema//film_name
+<http://rpcw.di.uminho.pt/2024/cinema//film_name> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:range xsd:string .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#person_abstract
-:person_abstract rdf:type owl:DatatypeProperty ;
-                 rdfs:range xsd:string .
+###  http://rpcw.di.uminho.pt/2024/cinema//person_abstract
+<http://rpcw.di.uminho.pt/2024/cinema//person_abstract> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:range xsd:string .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#person_name
-:person_name rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:string .
+###  http://rpcw.di.uminho.pt/2024/cinema//person_name
+<http://rpcw.di.uminho.pt/2024/cinema//person_name> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:range xsd:string .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#release_year
-:release_year rdf:type owl:DatatypeProperty ;
-              rdfs:range xsd:string .
+###  http://rpcw.di.uminho.pt/2024/cinema//release_year
+<http://rpcw.di.uminho.pt/2024/cinema//release_year> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:range xsd:string .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#Book
-:Book rdf:type owl:Class .
+###  http://rpcw.di.uminho.pt/2024/cinema//Book
+<http://rpcw.di.uminho.pt/2024/cinema//Book> rdf:type owl:Class .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#Category
-:Category rdf:type owl:Class .
+###  http://rpcw.di.uminho.pt/2024/cinema//Category
+<http://rpcw.di.uminho.pt/2024/cinema//Category> rdf:type owl:Class .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#Film
-:Film rdf:type owl:Class .
+###  http://rpcw.di.uminho.pt/2024/cinema//Film
+<http://rpcw.di.uminho.pt/2024/cinema//Film> rdf:type owl:Class .
 
 
-###  http://rpcw.di.uminho.pt/2024/cinema/#Person
-:Person rdf:type owl:Class .
+###  http://rpcw.di.uminho.pt/2024/cinema//Person
+<http://rpcw.di.uminho.pt/2024/cinema//Person> rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

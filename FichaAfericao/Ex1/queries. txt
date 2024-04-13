@@ -1,0 +1,68 @@
+
+PREFIX : <http://www.semanticweb.org/avt/fichaAf/alunos/>
+select (count(?aluno) as ?count)  where { 
+	?aluno a :Aluno .
+}
+
+
+
+select (count(?aluno) as ?count)  where { 
+	?aluno a :Aluno.
+    ?aluno :curso "LCC".
+}
+
+
+
+select ?id ?nome ?curso ?nota where { 
+	?aluno a :Aluno.
+    
+    ?aluno :idAluno ?id.
+    ?aluno :nome ?nome.
+    ?aluno :curso ?curso.
+    
+    ?aluno :did_Exam ?exam.
+    ?exam :normal ?nota.
+    filter(?nota >= 10)
+    
+} order by asc(?nome)
+
+
+
+
+select ?nota (COUNT (?aluno) as ?numeroAlunos) where {
+    ?aluno a :Aluno.
+    ?aluno :nome ?nome. 
+	?aluno :idAluno ?id.
+    ?aluno :did_Project ?project.
+	?project :projeto ?nota.
+} group by (?nota)
+
+
+
+
+SELECT ?id ?nome ?curso (SUM(?nota) as ?total) 
+WHERE {
+    ?aluno a :Aluno ;
+           :nome ?nome ;
+           :idAluno ?id ;
+           :curso ?curso ;
+           :did_TPC ?tpc .
+    
+    ?tpc :tpc_nota ?nota .
+}
+GROUP BY ?id ?nome ?curso
+ORDER BY DESC(?total)
+
+
+
+SELECT ?curso (COUNT(?aluno) as ?nAlunos) 
+WHERE {
+    ?aluno a :Aluno ;
+           :nome ?nome ;
+           :idAluno ?id ;
+           :curso ?curso ;
+           :did_TPC ?tpc .
+    }
+GROUP BY ?curso
+ORDER BY ASC(?curso)
+
