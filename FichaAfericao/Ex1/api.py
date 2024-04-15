@@ -208,6 +208,31 @@ SELECT ?aluno ?idAluno ?nome ?curso
     #print({"students": students})
     return jsonify({"students": students})
 
+# Route for getting the information of a student by Course
+@app.route('/api/alunos?groupBy=curso', methods=['GET'])
+def get_students_in_course ():
+    # Example SPARQL query to get the information of a student by ID
+    sparql_query = f"""
+    PREFIX ex: <http://www.semanticweb.org/avt/fichaAf/alunos/>
+    
+    select (count(?aluno) as ?count) ?curso where {{
+        ?aluno a :Aluno .
+        ?aluno :curso ?curso
+    }} group by (?curso)
+
+    """
+
+    # Execute the SPARQL query
+    result = execute_sparql_query(sparql_query)
+    
+    results = {}
+
+    if result != [] and result != None:
+        for binding in result['results']['bindings']:
+            nAlunos = binding.get('count')
+            curso = binding.get('curso')
+        results.append( {"curso":curso, "nAlunos": nAlunos})
+    return jsonify({"results": results})
 
 if __name__ == '__main__':
     app.run()
