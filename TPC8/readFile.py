@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as etree
 from rdflib import Graph, Literal, RDF, URIRef, Namespace, OWL
+from rdflib import XSD
 
 
 # Parse the XML file
@@ -107,61 +108,67 @@ def process_ids(lst_persons):
     
     return lst_persons
 
-
-
 def create_uri(entity_type, idAluno, additional_info=None):
     if additional_info:
-        return URIRef(f"{nmp}{entity_type}_{idAluno}_{additional_info}")
+        return URIRef(f"{nmp}{entity_type}_{additional_info.replace(' ', '_').replace('/', '')}")
     return URIRef(f"{nmp}{entity_type}_{idAluno}")
 
-
 def add_to_ontology(lst_persons):
-
     for ind in lst_persons:
         # Create individual URI
-        ind_uri = nmp[ind["id"]]
-
-        individual_uri = create_uri('Pessoa', ind_uri)
         
+        print(f"ind['id']:  {ind['id']}")
+        if ind["id"]:
+            individual_uri = create_uri('Pessoa', ind["id"])
+        else:
+            str_identifier = ind["name"].replace(" ", "_")
+            individual_uri = create_uri('Pessoa', str_identifier)
+       #print(f"individual_uri:  {individual_uri}")
+
         # Add individual type
         g.add((individual_uri, RDF.type, nmp["Pessoa"]))
         
         # Add data properties
         g.add((individual_uri, nmp["nome"], Literal(ind["name"])))
-        g.add((individual_uri, nmp["title"], Literal(ind["titl"])))
+        g.add((individual_uri, nmp["title"], Literal(ind["title"])))
         g.add((individual_uri, nmp["sex"], Literal(ind["sex"])))
-        g.add((individual_uri, nmp["birthdate"], Literal(ind["birthdate"], datatype=XSD.string)))
+        
+        # Format date correctly
+        if ind["birthdate"]:
+            birthdate_literal = Literal(ind["birthdate"], datatype=XSD.date)
+            g.add((individual_uri, nmp["birthdate"], birthdate_literal))
+        if ind["deathdate"]:
+            deathdate_literal = Literal(ind["deathdate"], datatype=XSD.date)
+            g.add((individual_uri, nmp["deathdate"], deathdate_literal))
+        
         g.add((individual_uri, nmp["birthplace"], Literal(ind["birthplace"])))
-        g.add((individual_uri, nmp["deathdate"], Literal(ind["deathdate"], datatype=XSD.string)))
         g.add((individual_uri, nmp["deathplace"], Literal(ind["deathplace"])))
         g.add((individual_uri, nmp["burialplace"], Literal(ind["burialplace"])))
 
         # Add spouse information if available
         if ind["spouse"] is not None:
-            spouse_uri = nmp[ind["spouse"]]
+            spouse_uri = create_uri('Pessoa', ind["spouse"])
             g.add((individual_uri, nmp["temMae"], spouse_uri))
 
         # Add children information if available
         if ind["children"] is not None:
             for child_id in ind["children"]:
-                child_uri = nmp[child_id]
+                child_uri = create_uri('Pessoa', child_id)
                 g.add((individual_uri, nmp["temPai"], child_uri))
 
         # Add parent information if available
         if ind["parents"] is not None:
             for parent_id in ind["parents"]:
-                parent_uri = nmp[parent_id]
+                parent_uri = create_uri('Pessoa', parent_id)
                 g.add((individual_uri, nmp["temMae"], parent_uri))
 
     # Serialize the graph to Turtle format
     g.serialize(destination='TPC8/family-base.ttl', format='ttl')
 
 
-
-
 population = lst_persons()
 clean_population = process_ids(population)
-
+add_to_ontology(clean_population)
 
 #print("\n\n")
 #print(clean_population[0])
