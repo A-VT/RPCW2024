@@ -1,24 +1,11 @@
 @prefix ns1: <http://rpcw.di.uminho.pt/2024/familia/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns1:Pessoa_I1002 a ns1:Pessoa ;
-    ns1:birthdate "1001-01-01"^^xsd:date ;
+ns1:Pessoa_I1008 a ns1:Pessoa ;
     ns1:birthplace "None" ;
     ns1:burialplace "None" ;
-    ns1:deathdate "1101-01-01"^^xsd:date ;
-    ns1:deathplace "None" ;
-    ns1:nome "Margaret  " ;
-    ns1:sex "F" ;
-    ns1:temMae ns1:Pessoa_I991,
-        ns1:Pessoa_I998 ;
-    ns1:title "None" .
-
-ns1:Pessoa_I1003 a ns1:Pessoa ;
-    ns1:birthdate "1701-01-01"^^xsd:date ;
-    ns1:birthplace "Shrewsbury" ;
-    ns1:burialplace "None" ;
-    ns1:deathdate "AFT    1483"^^xsd:date ;
-    ns1:deathplace "None" ;
-    ns1:nome "Richard  " ;
+    ns1:deathdate "9 FEB 1499"^^xsd:date ;
+    ns1:deathplace "London,,England" ;
+    ns1:nome "John 1st Welles" ;
     ns1:sex "M" ;
     ns1:temMae 

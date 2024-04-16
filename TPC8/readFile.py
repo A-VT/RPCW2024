@@ -12,7 +12,7 @@ g = Graph()
 
 # Iterate over each person element
 
-def lst_persons():
+def create_lst_persons():
     lst_persons = []
 
     for person in root.findall('person'):
@@ -46,7 +46,9 @@ def lst_persons():
         parents = []
         if parent_elements:
             for parent in parent_elements:
-                parents.append(parent.text.replace('/', ''))
+                #parents.append(parent.text.replace('/', ''))
+                ref = parent.attrib.get("ref")
+                parents.append(ref)
         else:
             parents = None
 
@@ -55,7 +57,9 @@ def lst_persons():
         children_elements = person.findall('child')
         if children_elements:
             for child in children_elements:
-                children.append(child.text.replace('/', ''))
+                ref = child.attrib.get("ref")
+                children.append(ref)
+                #children.append(child.text.replace('/', ''))
         else:
             children = None
         
@@ -151,10 +155,10 @@ def add_to_ontology(lst_persons):
             g.add((individual_uri, nmp["temMae"], spouse_uri))
 
         # Add children information if available
-        if ind["children"] is not None:
-            for child_id in ind["children"]:
-                child_uri = create_uri('Pessoa', child_id)
-                g.add((individual_uri, nmp["temPai"], child_uri))
+        #if ind["children"] is not None:
+        #    for child_id in ind["children"]:
+        #        child_uri = create_uri('Pessoa', child_id)
+        #        g.add((individual_uri, nmp["temPai"], child_uri))
 
         # Add parent information if available
         if ind["parents"] is not None:
@@ -166,9 +170,10 @@ def add_to_ontology(lst_persons):
     g.serialize(destination='TPC8/family-base.ttl', format='ttl')
 
 
-population = lst_persons()
-clean_population = process_ids(population)
-add_to_ontology(clean_population)
+population = create_lst_persons()
+#print(population[0])
+#clean_population = process_ids(population)
+add_to_ontology(population)
 
 #print("\n\n")
 #print(clean_population[0])
